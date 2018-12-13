@@ -1,0 +1,16 @@
+{#
+---------------------------------------------------------------------------
+Global Nav
+---------------------------------------------------------------------------
+#}
+
+{% set nav = craft.entries.section('nav').all() %}
+{% set slug = craft.app.request.segments|first %}
+
+<nav class="nav nav--{{ pageTheme }}">
+
+  {% nav link in nav %}
+  <a class="nav__link {{ slug == link.slug ? 'nav__link--active' }}" href="{{ link.navLink }}" tabindex="{{ loop.index + 1 }}">{{ link.title }}</a>
+  {% endnav %}
+
+</nav>

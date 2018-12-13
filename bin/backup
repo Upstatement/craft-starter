@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+# Load configuration for current environment.
+if [ -f .env ]; then
+  source .env
+else
+  echo "Missing .env file!"
+  exit 1
+fi
+
+CRAFT_MYSQLDUMP_CMD="docker-compose exec -T db mysqldump"
+CRAFT_MYSQL_CREDS="-u$DB_USER -p$DB_PASSWORD"
+CRAFT_MYSQLDUMP="$CRAFT_MYSQLDUMP_CMD $CRAFT_MYSQL_CREDS $DB_DATABASE"
+
+echo "Backing up local database ..."
+$CRAFT_MYSQLDUMP | gzip > backups/backup.sql.gz

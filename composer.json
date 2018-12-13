@@ -1,0 +1,37 @@
+{
+  "name": "upstatement/craft-starter",
+  "description": "Starter project for Craft CMS",
+  "version": "0.1.0",
+  "license": "proprietary",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.0"
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "craftcms/cms": "^3.0.0",
+    "craftcms/redactor": "^2.1",
+    "yiisoft/yii2-redis": "2.0.8",
+    "vlucas/phpdotenv": "2.5.0",
+    "nerds-and-company/schematic": "^4.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.3",
+    "friendsofphp/php-cs-fixer": "^2.13",
+    "deployer/deployer": "^6.0",
+    "deployer/recipes": "^6.0"
+  }
+}

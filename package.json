@@ -1,0 +1,65 @@
+{
+  "name": "@upstatement/craft-starter",
+  "version": "0.1.0",
+  "description": "Starter project for Craft CMS",
+  "keywords": [],
+  "author": "Upstatement <tech@upstatement.com>",
+  "private": true,
+  "license": "UNLICENSED",
+  "browserslist": [
+    "> 1%"
+  ],
+  "scripts": {
+    "build:vendor": "NODE_ENV=production webpack --config webpack/config.vendor.js --progress --hide-modules",
+    "build": "NODE_ENV=production webpack --config webpack/config.js --progress --hide-modules",
+    "start": "NODE_ENV=development webpack --config webpack/config.js --watch --progress --hide-modules",
+    "lint:scripts": "eslint webpack static/js/**/*.js --cache",
+    "lint:styles": "stylelint 'static/sass/**/*.scss' --cache -f string --syntax scss",
+    "lint:php": "./vendor/bin/phpcs --standard=phpcs.xml.dist --error-severity=1 --warning-severity=8 -p --ignore=*/public/*"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint:scripts && npm run lint:styles && npm run lint:php"
+    }
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@upstatement/eslint-config": "^0.3.1",
+    "@upstatement/prettier-config": "^0.3.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^2.0.0",
+    "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "file-loader": "^2.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "stylelint": "^9.9.0",
+    "stylelint-config-sass-guidelines": "^5.3.0",
+    "stylelint-order": "^2.0.0",
+    "stylelint-scss": "^3.4.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+# Echo commands when running from Travis.
+if [ $TRAVIS ]; then
+  set -x
+fi
+
+# Populate deploy stage and branch from CLI args, with fallbacks.
+DEPLOY_STAGE=${1:-${DEPLOY_STAGE:-development}}
+DEPLOY_BRANCH=${2:-${DEPLOY_BRANCH}}
+
+if [ $DEPLOY_BRANCH ]; then
+  # Deploy a specific branch
+  echo "Deploying updates from $DEPLOY_BRANCH to $DEPLOY_STAGE ..."
+  ./vendor/bin/dep deploy --branch=$DEPLOY_BRANCH -n -vvv $DEPLOY_STAGE
+else
+  # Deploy the default branch defined in `hosts.yml`
+  echo "Deploying updates to ${DEPLOY_STAGE} ..."
+  ./vendor/bin/dep deploy -n -vvv $DEPLOY_STAGE
+fi

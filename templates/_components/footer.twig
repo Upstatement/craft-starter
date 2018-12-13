@@ -1,0 +1,19 @@
+{#
+---------------------------------------------------------------------------
+Global Footer
+---------------------------------------------------------------------------
+#}
+
+{% set footerLinks = craft.entries.section('footerLinks').all() %}
+
+<footer class="footer">
+
+  <ul class="footer__links">
+    {% nav link in footerLinks %}
+    <li>
+        <a class="footer__link" href="{{ link.navLink }}">{{ link.title }}</a>
+    </li>
+    {% endnav %}
+  </ul>
+
+</footer>

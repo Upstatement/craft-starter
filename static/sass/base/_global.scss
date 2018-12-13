@@ -1,0 +1,77 @@
+// ---------------------------------------------------------------------------
+// HTML & Body
+// ---------------------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  text-size-adjust: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+// ---------------------------------------------------------------------------
+// Defaults
+// ---------------------------------------------------------------------------
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+// ---------------------------------------------------------------------------
+// Text highlight
+// ---------------------------------------------------------------------------
+
+::selection {
+  background: #accef7;
+  text-shadow: none;
+}
+
+// ---------------------------------------------------------------------------
+// Skip to Content Link
+// ---------------------------------------------------------------------------
+
+.skip-to-content {
+  position: absolute;
+  top: auto;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -99;
+
+  &:focus,
+  &:active {
+    color: #ffffff;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    z-index: 99;
+  }
+}

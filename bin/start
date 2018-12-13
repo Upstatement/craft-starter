@@ -1,0 +1,44 @@
+#!/bin/bash
+
+set -e
+
+stop_containers() {
+  echo "Running Schematic export..."
+  echo
+  docker-compose exec craft ./craft schematic/export
+  echo
+
+  echo "Shutting off containers..."
+  echo
+  docker-compose stop
+  echo
+
+  echo "All done!"
+}
+
+trap stop_containers SIGINT
+
+echo "Starting Craft..."
+echo
+docker-compose start
+echo
+
+echo "Running composer install..."
+echo
+docker-compose exec craft composer install
+echo
+
+echo "Running pending craft migrations..."
+echo
+docker-compose exec craft ./craft migrate/all
+echo
+
+echo "Running Schematic import..."
+echo
+docker-compose exec craft ./craft schematic/import --force
+echo
+
+echo "Starting static dev server..."
+echo
+npm start
+echo

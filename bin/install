@@ -1,0 +1,55 @@
+#!/bin/bash
+
+set -e
+
+create_containers() {
+  docker-compose up -d
+}
+
+wait_for_containers() {
+  amount=${1:-5}
+  sleep $amount
+}
+
+composer_install() {
+  docker-compose exec craft composer install
+}
+
+install_static_deps() {
+  npm install
+}
+
+build_static() {
+  npm run build:vendor && npm run build
+}
+
+
+echo "Bringing up project containers..."
+echo
+create_containers
+echo
+
+echo "Waiting for containers to finish starting..."
+wait_for_containers
+
+echo "Running composer install..."
+echo
+composer_install
+echo
+
+echo "Installing static deps..."
+echo
+install_static_deps
+echo
+
+echo "Building static assets..."
+echo
+build_static
+echo
+
+echo "-------------------------------"
+echo "Install completed successfully!"
+echo "-------------------------------"
+echo
+echo "Run './bin/start' and get to work!"
+echo

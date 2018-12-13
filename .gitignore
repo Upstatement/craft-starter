@@ -1,0 +1,8 @@
+/.env
+/.idea
+/node_modules
+/vendor
+.eslintcache
+.stylelintcache
+.DS_Store
+.vscode/

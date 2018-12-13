@@ -1,0 +1,54 @@
+plugins:
+  redactor:
+    isEnabled: false
+    isInstalled: false
+    settings: {}
+  schematic:
+    isEnabled: true
+    isInstalled: true
+    settings: {}
+sites:
+  default:
+    class: craft\models\Site
+    attributes:
+      name: craftstarter
+      handle: default
+      language: en-US
+      primary: '1'
+      hasUrls: '1'
+      originalName: null
+      originalBaseUrl: null
+      baseUrl: 'http://craftstarter.ups.dock/'
+      sortOrder: '1'
+    group: craftstarter
+volumes: {}
+assetTransforms: {}
+emailSettings:
+  settings:
+    fromEmail: tech@upstatement.com
+    fromName: craftstarter
+    transportType: craft\mail\transportadapters\Sendmail
+fields: {}
+generalSettings:
+  settings:
+    edition: 0
+    timezone: America/New_York
+    name: craftstarter
+    'on': '1'
+    maintenance: '0'
+sections: {}
+globalSets: {}
+categoryGroups: {}
+tagGroups: {}
+userGroups: {}
+userSettings:
+  settings:
+    requireEmailVerification: true
+    allowPublicRegistration: false
+    defaultGroup: null
+    photoSubpath: ''
+    photoVolume: null
+  fieldLayout:
+    type: craft\elements\User
+    fields: {}
+elementIndexSettings: {}

@@ -1,0 +1,40 @@
+version: '3.5'
+services:
+  craft:
+    build: .
+    volumes:
+      - ./:/var/www/html:cached
+      - /var/www/html/node_modules
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    environment:
+      UPS_DOCK_NAME: Craft Starter
+      VIRTUAL_HOST: craftstarter.ups.dock
+      HTTPS_METHOD: noredirect
+    networks:
+      - proxy
+      - default
+  db:
+    image: mysql:5.7.22
+    volumes:
+      - ./docker/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+      - ./docker/initdb:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: craft
+      MYSQL_USER: craft
+      MYSQL_PASSWORD: craft
+      TZ: America/New_York
+  redis:
+    image: redis
+volumes:
+  db_data:
+networks:
+  proxy:
+    name: ups-dock
+    external: true

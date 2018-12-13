@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+destroy_containers() {
+  docker-compose down -v --remove-orphans
+}
+
+echo "Destroying project containers..."
+destroy_containers

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Running Schematic import..."
+echo
+docker-compose exec craft ./craft schematic/import --force
+echo
