@@ -39,7 +39,7 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 
 At this point you should have a fully functioning Craft install available at https://craftstarter.ups.dock.
 
-> **NOTE: To access the CMS you need to use the Ups Dock (https://craftstarter.ups.dock/admin) and not localhost**.
+> **NOTE: To access the CMS you need to use the Ups Dock URL (https://craftstarter.ups.dock/admin) and not localhost:3000/admin**.
 
 ## 🐳 Ups Dock Environment
 
@@ -56,11 +56,31 @@ To modify front-end stuff, you should be working out of the `static` directory f
 
 When you're ready to stop, type `Control-C` to kill the server and export the schema
 
-### ProTips
+### Pro Tips
 
-- If your schema file gets in a weird state, you can always run `./bin/import-schema` (while the container is up and running)
-- If you ever need to backup your database, you can run `./bin/backup`, and a gzipped SQL file will be dumped into the `backups` directory
+- If your schema file gets into a weird state, while the container is up and running you can always manually import the schema
+
+  ```bash
+  ./bin/import-schema
+  ```
+
+- If you ever need to backup your database, while the container is up and running you can run
+
+  ```bash
+  ./bin/backup
+  ```
+
+  and a gzipped SQL file will be dumped into the `backups` directory
+
 - If you try to run a script in the `bin` directory and get an error message such as `permission denied: ./bin/<name-of-file>`, all you have to do is run `chmod +x bin/<name-of-file>` to give it the right permissions
+
+## 💣 Uninstalling
+
+To completely destroy the local Docker environment run:
+
+```bash
+./bin/uninstall
+```
 
 ## 🖼 Static Assets
 
@@ -100,14 +120,6 @@ You can also run the linters from your terminal at any time:
 npm run lint:styles
 npm run lint:scripts
 npm run lint:php
-```
-
-## 💣 Uninstalling
-
-To completely destroy the local Docker environment run:
-
-```bash
-./bin/uninstall
 ```
 
 ## 📚 Resources
