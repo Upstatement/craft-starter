@@ -2,11 +2,11 @@ plugins:
   redactor:
     isEnabled: false
     isInstalled: false
-    settings: {}
+    settings: {  }
   schematic:
     isEnabled: true
     isInstalled: true
-    settings: {}
+    settings: {  }
 sites:
   default:
     class: craft\models\Site
@@ -21,14 +21,14 @@ sites:
       baseUrl: 'http://craftstarter.ups.dock/'
       sortOrder: '1'
     group: craftstarter
-volumes: {}
-assetTransforms: {}
+volumes: {  }
+assetTransforms: {  }
 emailSettings:
   settings:
     fromEmail: tech@upstatement.com
     fromName: craftstarter
     transportType: craft\mail\transportadapters\Sendmail
-fields: {}
+fields: {  }
 generalSettings:
   settings:
     edition: 0
@@ -36,11 +36,11 @@ generalSettings:
     name: craftstarter
     'on': '1'
     maintenance: '0'
-sections: {}
-globalSets: {}
-categoryGroups: {}
-tagGroups: {}
-userGroups: {}
+sections: {  }
+globalSets: {  }
+categoryGroups: {  }
+tagGroups: {  }
+userGroups: {  }
 userSettings:
   settings:
     requireEmailVerification: true
@@ -50,5 +50,5 @@ userSettings:
     photoVolume: null
   fieldLayout:
     type: craft\elements\User
-    fields: {}
-elementIndexSettings: {}
+    fields: {  }
+elementIndexSettings: {  }
