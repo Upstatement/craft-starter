@@ -30,8 +30,7 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 2.  Install [ups-dock](https://github.com/upstatement/ups-dock)
 3.  Ensure [NVM](https://github.com/creationix/nvm) is installed globally (see [Ups Dev Env Setup](https://github.com/Upstatement/Upstatement/wiki/2017-Development-Environment-Setup))
 4.  Run `nvm install` to ensure you're using the correct version of Node
-5.  Create a file called `.env` and populate it with the contents of `.env.example`
-6.  Run the install command:
+5.  Run the install command:
 
     ```bash
     ./bin/install

@@ -15,6 +15,10 @@ composer_install() {
   docker-compose exec craft composer install
 }
 
+copy_dotenv() {
+  cp .env.example .env
+}
+
 install_static_deps() {
   npm install
 }
@@ -35,6 +39,11 @@ wait_for_containers
 echo "Running composer install..."
 echo
 composer_install
+echo
+
+echo "Copying .env.example to .env..."
+echo
+copy_dotenv
 echo
 
 echo "Installing static deps..."
