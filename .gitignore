@@ -1,6 +1,7 @@
 /.env
 /.idea
 /node_modules
+/public/static/dist
 /vendor
 .eslintcache
 .stylelintcache

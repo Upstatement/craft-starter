@@ -15,6 +15,14 @@ composer_install() {
   docker-compose exec craft composer install
 }
 
+copy_dotenv() {
+  cp .env.example .env
+}
+
+setup_secure_key() {
+  docker-compose exec craft ./craft setup/security-key
+}
+
 install_static_deps() {
   npm install
 }
@@ -35,6 +43,16 @@ wait_for_containers
 echo "Running composer install..."
 echo
 composer_install
+echo
+
+echo "Copying .env.example to .env..."
+echo
+copy_dotenv
+echo
+
+echo "Setting up Craft secure key..."
+echo
+setup_secure_key
 echo
 
 echo "Installing static deps..."

@@ -1,1 +1,2 @@
 **/*.twig
+config/schema.yml
