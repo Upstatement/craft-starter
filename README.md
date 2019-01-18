@@ -20,9 +20,9 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
    - `Craft Starter`
    - `craftstarter`
 
-     and replace those with your desired theme name
+     and replace those with your desired project name
 
-   > **Protip:** In VS Code the shortcut for find & replace is `CMD + Shift + H`
+   > **NOTE:** Whatever you replace `craftstarter` with should be all lowercase, as it will be part of your development URL
 
 ## 🚀 Getting Started
 
@@ -36,14 +36,16 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
     ./bin/install
     ```
 
-At this point you should have a fully functioning Craft install available at https://craftstarter.ups.dock.
+At this point you should have a fully functioning Craft install available at https://your-project-name.ups.dock.
 
-> **NOTE: To access the CMS you need to use the Ups Dock URL (https://craftstarter.ups.dock/admin) and not localhost:3000/admin**.
+> **NOTE: To access the CMS you need to use the Ups Dock URL (https://your-project-name.ups.dock/admin) and not localhost:3000/admin**.
 
 ## 🐳 Ups Dock Environment
 
-- **URL**: https://craftstarter.ups.dock
-- **Craft Admin**: https://craftstarter.ups.dock/admin (`un`: `admin`, `pw: password`)
+- **URL**: https://your-project-name.ups.dock
+- **Craft Admin**: https://your-project-name.ups.dock/admin (`un`: `admin`, `pw: password`)
+
+> **NOTE:** `your-project-name` should be the same name you replaced `craftstarter` with in the "Making it your own" section above
 
 ## 🛠 Development Workflow
 
@@ -51,7 +53,7 @@ At this point you should have a fully functioning Craft install available at htt
 2.  Run `./bin/start` to start the Craft backend / static build server
 3.  Open the `Local` URL that appears below `[Browsersync] Access URLs:` in your browser (https://localhost:3000/)
 
-To modify front-end stuff, you should be working out of the `static` directory for styles & JavaScript and the `templates` directory for Twig markup. Read more about using Twig with Craft [here](https://docs.craftcms.com/v3/dev/twig-primer.html#three-types-of-twig-tags).
+To modify front-end stuff, you should be working out of the `static` directory for styles & JavaScript and the `templates` directory for Twig markup. Read more about [using Twig with Craft](https://docs.craftcms.com/v3/dev/twig-primer.html#three-types-of-twig-tags).
 
 When you're ready to stop, type `Control-C` to kill the server and export the schema
 
@@ -72,6 +74,14 @@ When you're ready to stop, type `Control-C` to kill the server and export the sc
   and a gzipped SQL file will be dumped into the `backups` directory
 
 - If you try to run a script in the `bin` directory and get an error message such as `permission denied: ./bin/<name-of-file>`, all you have to do is run `chmod +x bin/<name-of-file>` to give it the right permissions
+
+- On `./bin/install`, if you encounter an error such as
+
+  ```bash
+  ERROR: Bind for 0.0.0.0:3306 failed: port is already allocated
+  ```
+
+  this is happening because you already have something else (most likely a container from a different project) running that is using port 3306. To see your running docker containers, type `docker-ps -a`. Shut down any containers using port 3306.
 
 ## 💣 Uninstalling
 
