@@ -2,7 +2,7 @@
 
 An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 
-## 🎁 What's in the box
+## 🎁 What's In the Box
 
 - Craft 3 install
 - [Schematic](https://github.com/nerds-and-company/schematic) plugin to synchronize your Craft setup over multiple environments
@@ -12,18 +12,22 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 - Upstatement linting configuration for ESLint & Prettier
 - Stylelint and PHP linting
 
-## 🚀 Getting Started
-
 ### 🧰 Prerequisites
 
 1. Install [Docker for Mac](https://www.docker.com/docker-mac)
 2. Install [Ups Dock](https://github.com/upstatement/ups-dock)
 3. Ensure [NVM](https://github.com/creationix/nvm) is installed globally (see [Ups Dev Env Setup](https://github.com/Upstatement/Upstatement/wiki/2017-Development-Environment-Setup))
 
-### 🏠 Make it your own
+## 🚀 Getting Started
 
-1. Download this repository as a ZIP file (unless you want to manually remove the `.git` folder)
-2. Do a **case-sensitive** find and replace for
+1. Download or clone this repository, and make sure to remove the `.git` folder
+2. Make sure you're using the correct version of Node
+
+   ```bash
+   nvm install
+   ```
+
+3. Do a **case-sensitive** find and replace for
 
    - `Craft Starter`
    - `craftstarter`
@@ -32,21 +36,13 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 
    > **NOTE:** Whatever you replace `craftstarter` with should be all lowercase, as it will be part of your Ups Dock URL
 
-### 💻 Installation
-
-1. Make sure you're using the correct version of Node
-
-   ```bash
-   nvm install
-   ```
-
-2. Run the install script:
+4. Run the install script:
 
    ```bash
    ./bin/install
    ```
 
-At this point you should have a fully functioning Craft install available at https://your-project-name.ups.dock.
+At this point you should have a fully functioning Craft install available at https://your-project-name.ups.dock
 
 > **NOTE: To access the CMS you need to use the Ups Dock URL (https://your-project-name.ups.dock/admin) and not localhost:3000/admin**.
 
