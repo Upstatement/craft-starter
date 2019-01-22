@@ -12,7 +12,7 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 - Upstatement linting configuration for ESLint & Prettier
 - Stylelint and PHP linting
 
-### 🧰 Prerequisites
+## 🧰 Prerequisites
 
 1. Install [Docker for Mac](https://www.docker.com/docker-mac)
 2. Install [Ups Dock](https://github.com/upstatement/ups-dock)
