@@ -12,7 +12,15 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 - Upstatement linting configuration for ESLint & Prettier
 - Stylelint and PHP linting
 
-## 🏠 Making it your own
+## 🚀 Getting Started
+
+### 🧰 Prerequisites
+
+1. Install [Docker for Mac](https://www.docker.com/docker-mac)
+2. Install [Ups Dock](https://github.com/upstatement/ups-dock)
+3. Ensure [NVM](https://github.com/creationix/nvm) is installed globally (see [Ups Dev Env Setup](https://github.com/Upstatement/Upstatement/wiki/2017-Development-Environment-Setup))
+
+### 🏠 Make it your own
 
 1. Download this repository as a ZIP file (unless you want to manually remove the `.git` folder)
 2. Do a **case-sensitive** find and replace for
@@ -22,19 +30,21 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 
      and replace those with your desired project name
 
-   > **NOTE:** Whatever you replace `craftstarter` with should be all lowercase, as it will be part of your development URL
+   > **NOTE:** Whatever you replace `craftstarter` with should be all lowercase, as it will be part of your Ups Dock URL
 
-## 🚀 Getting Started
+### 💻 Installation
 
-1.  Install [Docker for Mac](https://www.docker.com/docker-mac)
-2.  Install [ups-dock](https://github.com/upstatement/ups-dock)
-3.  Ensure [NVM](https://github.com/creationix/nvm) is installed globally (see [Ups Dev Env Setup](https://github.com/Upstatement/Upstatement/wiki/2017-Development-Environment-Setup))
-4.  Run `nvm install` to ensure you're using the correct version of Node
-5.  Run the install command:
+1. Make sure you're using the correct version of Node
 
-    ```bash
-    ./bin/install
-    ```
+   ```bash
+   nvm install
+   ```
+
+2. Run the install script:
+
+   ```bash
+   ./bin/install
+   ```
 
 At this point you should have a fully functioning Craft install available at https://your-project-name.ups.dock.
 
@@ -49,9 +59,9 @@ At this point you should have a fully functioning Craft install available at htt
 
 ## 🛠 Development Workflow
 
-1.  Run `nvm use` to ensure you're using the correct version of Node
-2.  Run `./bin/start` to start the Craft backend / static build server
-3.  Open the `Local` URL that appears below `[Browsersync] Access URLs:` in your browser (https://localhost:3000/)
+1. Run `nvm use` to ensure you're using the correct version of Node
+2. Run `./bin/start` to start the Craft backend / static build server
+3. Open the `Local` URL that appears below `[Browsersync] Access URLs:` in your browser (https://localhost:3000/)
 
 To modify front-end stuff, you should be working out of the `static` directory for styles & JavaScript and the `templates` directory for Twig markup. Read more about [using Twig with Craft](https://docs.craftcms.com/v3/dev/twig-primer.html#three-types-of-twig-tags).
 
