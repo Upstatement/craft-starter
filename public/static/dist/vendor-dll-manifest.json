@@ -1,0 +1,6 @@
+{
+  "name": "vendor_1f76a3a68f379ef9606f",
+  "content": {
+    "./node_modules/jquery/dist/jquery.js": { "id": 1, "buildMeta": { "providedExports": true } }
+  }
+}

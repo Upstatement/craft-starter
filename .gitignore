@@ -1,9 +1,8 @@
 /.env
 /.idea
+/.vscode
 /node_modules
-/public/static/dist
 /vendor
 .eslintcache
 .stylelintcache
 .DS_Store
-.vscode/

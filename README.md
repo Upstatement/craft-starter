@@ -5,7 +5,6 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 ## 🎁 What's In the Box
 
 - Craft 3 install
-- [Schematic](https://github.com/nerds-and-company/schematic) plugin to synchronize your Craft setup over multiple environments
 - [ups-dock](https://github.com/upstatement/ups-dock) configuration
 - Webpack bundling & optimization of CSS and JavaScript
 - Browsersync
