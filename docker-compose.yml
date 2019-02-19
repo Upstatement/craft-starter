@@ -17,13 +17,10 @@ services:
       - proxy
       - default
   db:
-    image: mysql:5.7.22
+    image: mysql:5.7
     volumes:
-      - ./docker/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
       - ./docker/initdb:/docker-entrypoint-initdb.d
       - db_data:/var/lib/mysql
-    ports:
-      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: craft
