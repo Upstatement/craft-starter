@@ -5,8 +5,6 @@ services:
     volumes:
       - ./:/var/www/html:cached
       - /var/www/html/node_modules
-    ports:
-      - 8080:80
     depends_on:
       - db
     environment:

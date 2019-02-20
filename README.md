@@ -64,12 +64,6 @@ When you're ready to stop, type `Control-C` to kill the server.
 
 ### Pro Tips
 
-- If your schema file gets into a weird state, while the container is up and running you can always manually import the schema
-
-  ```bash
-  ./bin/import-schema
-  ```
-
 - If you ever need to backup your database, while the container is up and running you can run
 
   ```bash
