@@ -70,7 +70,7 @@ desc('Run Craft migrations');
 task('craft:migrate', './craft migrate/all --interactive=0');
 
 desc('Sync Craft project configuration');
-task('schematic:sync_project_config', './craft project-config/sync --interactive=0');
+task('craft:sync_project_config', './craft project-config/sync --interactive=0');
 
 desc('Deploy your project');
 task('deploy', [
