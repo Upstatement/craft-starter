@@ -5,7 +5,6 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 ## 🎁 What's In the Box
 
 - Craft 3 install
-- [Schematic](https://github.com/nerds-and-company/schematic) plugin to synchronize your Craft setup over multiple environments
 - [ups-dock](https://github.com/upstatement/ups-dock) configuration
 - Webpack bundling & optimization of CSS and JavaScript
 - Browsersync
@@ -61,15 +60,9 @@ At this point you should have a fully functioning Craft install available at htt
 
 To modify front-end stuff, you should be working out of the `static` directory for styles & JavaScript and the `templates` directory for Twig markup. Read more about [using Twig with Craft](https://docs.craftcms.com/v3/dev/twig-primer.html#three-types-of-twig-tags).
 
-When you're ready to stop, type `Control-C` to kill the server and export the schema
+When you're ready to stop, type `Control-C` to kill the server.
 
 ### Pro Tips
-
-- If your schema file gets into a weird state, while the container is up and running you can always manually import the schema
-
-  ```bash
-  ./bin/import-schema
-  ```
 
 - If you ever need to backup your database, while the container is up and running you can run
 
@@ -78,8 +71,6 @@ When you're ready to stop, type `Control-C` to kill the server and export the sc
   ```
 
   and a gzipped SQL file will be dumped into the `backups` directory
-
-- If you try to run a script in the `bin` directory and get an error message such as `permission denied: ./bin/<name-of-file>`, all you have to do is run `chmod +x bin/<name-of-file>` to give it the right permissions
 
 - On `./bin/install`, if you encounter an error such as
 

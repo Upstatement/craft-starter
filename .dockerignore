@@ -1,7 +1,5 @@
 /docker/initdb
 /node_modules
 /vendor
-/public/store/media
-/public/store/var
 /public/uploads
 /storage

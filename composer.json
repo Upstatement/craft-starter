@@ -10,6 +10,7 @@
     }
   },
   "config": {
+    "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
       "php": "7.0"
@@ -21,12 +22,10 @@
     ]
   },
   "require": {
-    "php": ">=7.0.0",
     "craftcms/cms": "^3.0.0",
     "craftcms/redactor": "^2.1",
-    "yiisoft/yii2-redis": "2.0.8",
-    "vlucas/phpdotenv": "2.5.0",
-    "nerds-and-company/schematic": "^4.1"
+    "vlucas/phpdotenv": "^2.4.0",
+    "yiisoft/yii2-redis": "2.0.8"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.3",

@@ -1,2 +1,3 @@
-**/*.twig
-config/schema.yml
+templates/**/*
+migrations/**/*
+config/project.yaml

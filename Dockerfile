@@ -1,4 +1,4 @@
-FROM php:7.0.28-apache
+FROM php:7.2-apache
 
 # Add system-wide OS packages
 RUN apt-get update && apt-get install -y \
@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y \
 	git \
 	libjpeg-dev \
 	libicu-dev \
-	libmcrypt-dev \
 	libpng-dev \
 	libxml2-dev \
 	msmtp \
@@ -16,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 # Configure PHP
 RUN docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr; \
-	docker-php-ext-install gd intl mcrypt pdo_mysql soap zip
+	docker-php-ext-install gd intl pdo_mysql soap zip
 
 COPY docker/php.ini /usr/local/etc/php/php.ini
 
@@ -49,10 +48,6 @@ RUN composer install && \
 # Add project source files
 COPY --chown=www-data:www-data . /var/www/html
 
-# Ensure Craft / Magento writable dirs exist with the correct permissions.
-RUN mkdir -p /var/www/html/storage /var/www/html/storage/runtime /var/www/html/storage/logs /var/www/html/public/uploads /var/www/html/public/cpresources /var/www/html/public/store/media /var/www/html/public/store/var && \
-	chown www-data:www-data /var/www/html/storage /var/www/html/storage/runtime /var/www/html/storage/logs /var/www/html/public/uploads /var/www/html/public/cpresources /var/www/html/public/store/media /var/www/html/public/store/var
-
 # Ensure system timezone is consistent with Arcustech servers
-ENV TZ=America/Chicago
+ENV TZ=America/New_York
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone

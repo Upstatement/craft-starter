@@ -25,10 +25,10 @@ set('shared_dirs', [
     'storage/runtime',
 ]);
 
-// Configure Slack notifications.
-set('slack_webhook', 'https://hooks.slack.com/services/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');
-set('slack_success_color', 'good');
-set('slack_failure_color', 'danger');
+// TODO: Configure Slack notifications.
+// set('slack_webhook', '');
+// set('slack_success_color', 'good');
+// set('slack_failure_color', 'danger');
 
 // Hosts
 inventory('hosts.yml');
@@ -67,14 +67,10 @@ task('build:upload', function () {
 });
 
 desc('Run Craft migrations');
-task('migrate', './craft migrate/all --interactive=0');
+task('craft:migrate', './craft migrate/all --interactive=0');
 
-desc('Import schema updates using Schematic');
-task('schematic', [
-    'schematic:import',
-]);
-
-task('schematic:import', './craft schematic/import --force');
+desc('Sync Craft project configuration');
+task('craft:sync_project_config', './craft project-config/sync --interactive=0');
 
 desc('Deploy your project');
 task('deploy', [
@@ -87,8 +83,8 @@ task('deploy', [
     'deploy:writable',
     'deploy:vendors',
     'build',
-    'migrate',
-    'schematic',
+    'craft:migrate',
+    'craft:sync_project_config',
     'deploy:clear_paths',
     'deploy:symlink',
     'deploy:unlock',
@@ -96,10 +92,10 @@ task('deploy', [
     'success'
 ]);
 
-// Slack notifications on deploy.
-before('deploy', 'slack:notify');
-after('success', 'slack:notify:success');
-after('deploy:failed', 'slack:notify:failure');
+// TODO: Slack notifications on deploy.
+// before('deploy', 'slack:notify');
+// after('success', 'slack:notify:success');
+// after('deploy:failed', 'slack:notify:failure');
 
 // If deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');

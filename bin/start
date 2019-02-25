@@ -3,11 +3,6 @@
 set -e
 
 stop_containers() {
-  echo "Running Schematic export..."
-  echo
-  docker-compose exec craft ./craft schematic/export
-  echo
-
   echo "Shutting off containers..."
   echo
   docker-compose stop
@@ -33,9 +28,9 @@ echo
 docker-compose exec craft ./craft migrate/all
 echo
 
-echo "Running Schematic import..."
+echo "Syncing Craft project configuration..."
 echo
-docker-compose exec craft ./craft schematic/import --force
+docker-compose exec craft ./craft project-config/sync
 echo
 
 echo "Starting static dev server..."

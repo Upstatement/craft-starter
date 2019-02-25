@@ -1,0 +1,54 @@
+dateModified: 1550872865
+email:
+  fromEmail: admin@example.com
+  fromName: 'Craft Starter'
+  template: null
+  transportSettings:
+    encryptionMethod: ''
+    host: $SYSTEM_EMAIL_SMTP_HOST_NAME
+    password: ''
+    port: $SYSTEM_EMAIL_SMTP_PORT
+    timeout: '10'
+    useAuthentication: ''
+    username: ''
+  transportType: craft\mail\transportadapters\Smtp
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.2
+siteGroups:
+  17a658f8-aefa-400c-8d0e-898c911d1af4:
+    name: 'Craft Starter'
+sites:
+  88bb7ef8-41f5-46d5-a33a-b5c80c65aff9:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: 'Craft Starter'
+    primary: true
+    siteGroup: 17a658f8-aefa-400c-8d0e-898c911d1af4
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: 'Craft Starter'
+  schemaVersion: 3.1.25
+  timeZone: America/New_York
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  f4ac2cff-9548-4bd8-ab1d-caeaeb1d2087:
+    handle: uploads
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: $ASSET_BASE_PATH
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: $ASSET_BASE_URL
