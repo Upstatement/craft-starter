@@ -15,7 +15,7 @@ An Upstatement-flavored starter project for [Craft 3](https://craftcms.com/)
 
 1. Install [Docker for Mac](https://www.docker.com/docker-mac)
 2. Install [Ups Dock](https://github.com/upstatement/ups-dock)
-3. Ensure [NVM](https://github.com/creationix/nvm) is installed globally (see [Ups Dev Env Setup](https://github.com/Upstatement/Upstatement/wiki/2017-Development-Environment-Setup))
+3. Ensure [NVM](https://github.com/creationix/nvm) is installed globally
 
 ## 🚀 Getting Started
 

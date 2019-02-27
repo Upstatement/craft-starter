@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "Upstatement <tech@upstatement.com>",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "browserslist": [
     "> 1%"
   ],
