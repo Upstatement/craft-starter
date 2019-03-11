@@ -29,6 +29,7 @@
     }
   },
   "dependencies": {
+    "autoprefixer": "^9.4.10",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
