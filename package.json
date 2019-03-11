@@ -30,7 +30,8 @@
   },
   "dependencies": {
     "autoprefixer": "^9.4.10",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "lazysizes": "^4.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
