@@ -7,7 +7,8 @@
   "private": true,
   "license": "MIT",
   "browserslist": [
-    "> 1%"
+    "defaults",
+    "ie >= 9"
   ],
   "scripts": {
     "build:vendor": "NODE_ENV=production webpack --config webpack/config.vendor.js --progress --hide-modules",
@@ -29,7 +30,6 @@
     }
   },
   "dependencies": {
-    "autoprefixer": "^9.4.10",
     "jquery": "^3.3.1",
     "lazysizes": "^4.1.6"
   },
@@ -38,6 +38,7 @@
     "@babel/preset-env": "^7.2.0",
     "@upstatement/eslint-config": "^0.3.1",
     "@upstatement/prettier-config": "^0.3.0",
+    "autoprefixer": "^9.4.10",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "browser-sync": "^2.26.3",
@@ -51,6 +52,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.15.3",
     "pretty-quick": "^1.8.0",
     "sass-loader": "^7.1.0",

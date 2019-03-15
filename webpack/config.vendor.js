@@ -7,7 +7,7 @@ module.exports = {
   context: baseDir,
   mode: 'production',
   entry: {
-    vendor: ['autoprefixer', 'jquery', 'lazysizes'],
+    vendor: ['jquery', 'lazysizes'],
   },
   output: {
     path: path.join(baseDir, 'public/static/dist'),
