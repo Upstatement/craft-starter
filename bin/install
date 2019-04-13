@@ -17,7 +17,7 @@ composer_install() {
 
 copy_dotenv() {
   if [ -f .env ]; then
-    echo "Have .env file already! Woo!"
+    echo ".env file already exists, skipping..."
   else
     echo "Missing .env file! Copying .env.example to .env..."
     cp .env.example .env
