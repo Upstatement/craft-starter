@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+STASH_PATH=backups/stash.sql.gz
+
+if [ ! -f .env ]; then
+  echo "Missing .env file!"
+  exit 1
+fi
+
+if [ ! -f $STASH_PATH ]; then
+  echo "No stashed db found at '$STASH_PATH'"
+  exit 1
+fi
+
+# Source local DB credentials from dotenv file
+source .env
+
+docker-compose start
+
+echo "Restoring database from stash ..."
+cat $STASH_PATH | gunzip | docker-compose exec -T db mysql -u$DB_USER -p$DB_PASSWORD $DB_DATABASE
+rm $STASH_PATH
+
+docker-compose stop

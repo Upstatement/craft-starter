@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+STASH_PATH=backups/stash.sql.gz
+
+if [ ! -f .env ]; then
+  echo "Missing .env file!"
+  exit 1
+fi
+
+if [ -f $STASH_PATH ]; then
+  echo "A stashed version of your database already exists at '$STASH_PATH'"
+  echo "Please remove it before running this script"
+  exit 1
+fi
+
+# Source local DB credentials from dotenv file
+source .env
+
+docker-compose start
+
+echo "Stashing local database ..."
+docker-compose exec -T db mysqldump -u$DB_USER -p$DB_PASSWORD $DB_DATABASE | gzip > $STASH_PATH
+
+docker-compose stop

@@ -1,0 +1,75 @@
+#
+# Configuration for the environment being pulled from.
+#
+
+FROM_SSH_USER="${FROM}_SSH_USER"
+FROM_SSH_USER="${!FROM_SSH_USER}"
+FROM_SSH_HOST="${FROM}_SSH_HOST"
+FROM_SSH_HOST="${!FROM_SSH_HOST}"
+FROM_BASE_PATH="${FROM}_BASE_PATH"
+FROM_BASE_PATH="${!FROM_BASE_PATH}"
+FROM_DB_DATABASE="${FROM}_DB_DATABASE"
+FROM_DB_DATABASE="${!FROM_DB_DATABASE}"
+FROM_DB_SERVER="${FROM}_DB_SERVER"
+FROM_DB_SERVER="${!FROM_DB_SERVER:-localhost}"
+FROM_DB_PORT="${FROM}_DB_PORT"
+FROM_DB_PORT="${!FROM_DB_PORT:-3306}"
+FROM_DB_USER="${FROM}_DB_USER"
+FROM_DB_USER="${!FROM_DB_USER}"
+FROM_DB_PASSWORD="${FROM}_DB_PASSWORD"
+FROM_DB_PASSWORD="${!FROM_DB_PASSWORD}"
+FROM_DB_TABLE_PREFIX="${FROM}_DB_TABLE_PREFIX"
+FROM_DB_TABLE_PREFIX="${!FROM_DB_TABLE_PREFIX}"
+
+#
+# Configuration for the environment being pulled to.
+#
+
+TO_BASE_PATH="BASE_PATH"
+TO_BASE_PATH=${!TO_BASE_PATH:-"$(pwd)/"}
+TO_SSH_USER="SSH_USER"
+TO_SSH_USER="${!TO_SSH_USER}"
+TO_SSH_HOST="SSH_HOST"
+TO_SSH_HOST="${!TO_SSH_HOST}"
+TO_DB_DATABASE="DB_DATABASE"
+TO_DB_DATABASE="${!TO_DB_DATABASE}"
+TO_DB_SERVER="DB_SERVER"
+TO_DB_SERVER="${!TO_DB_SERVER:-localhost}"
+TO_DB_PORT="DB_PORT"
+TO_DB_PORT="${!TO_DB_PORT:-3306}"
+TO_DB_USER="DB_USER"
+TO_DB_USER="${!TO_DB_USER}"
+TO_DB_PASSWORD="DB_PASSWORD"
+TO_DB_PASSWORD="${!TO_DB_PASSWORD}"
+TO_DB_TABLE_PREFIX="DB_TABLE_PREFIX"
+TO_DB_TABLE_PREFIX="${!TO_DB_TABLE_PREFIX}"
+
+#
+# Database variables.
+#
+
+# mysql / mysqldump commands to be executed against the current environment.
+MYSQL_CMD=${MYSQL_CMD:-"mysql"}
+MYSQL_CREDS="-u$TO_DB_USER -p$TO_DB_PASSWORD -P$TO_DB_PORT"
+MYSQLDUMP_CMD=${MYSQLDUMP_CMD:-"mysqldump"}
+MYSQL="$MYSQL_CMD $MYSQL_CREDS $TO_DB_DATABASE"
+MYSQLDUMP="$MYSQLDUMP_CMD $MYSQL_CREDS -Q --opt --add-drop-table --single-transaction --skip-lock-tables $TO_DB_DATABASE"
+
+# mysqldump command to be executed against the remote environment.
+FROM_MYSQLDUMP_CMD=${FROM_MYSQLDUMP_CMD:-"mysqldump"}
+FROM_MYSQL_CREDS="-u$FROM_DB_USER -p$FROM_DB_PASSWORD -P$FROM_DB_PORT"
+FROM_MYSQLDUMP="$FROM_MYSQLDUMP_CMD $FROM_MYSQL_CREDS -Q --opt --add-drop-table --single-transaction --skip-lock-tables $FROM_DB_DATABASE"
+
+#
+# Asset variables.
+#
+
+# Asset paths to pull relative to BASE_PATH.
+ASSET_PATHS=${ASSET_PATHS:-"public/uploads storage/rebrand"}
+
+#
+# Craft configuration.
+#
+
+# Craft CLI command.
+CRAFT_CMD=${CRAFT_CMD:-"./craft"}
