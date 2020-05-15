@@ -29,8 +29,8 @@
       @include mq($min-width, $max-width) {
         #{$property}: calc(
           #{$min-size} + (#{strip-units($max-size)} - #{strip-units($min-size)}) * (
-              100vw - #{$min-width}
-            ) / (#{strip-units($max-width)} - #{strip-units($min-width)})
+            100vw - #{$min-width}
+          ) / (#{strip-units($max-width)} - #{strip-units($min-width)})
         );
       }
       @include mq($max-width) {
@@ -39,9 +39,9 @@
     } @else {
       #{$property}: calc(
         #{$min-size} +
-          (#{strip-units($max-size)} - #{strip-units($min-size)}) *
-          (100vw - #{$min-width}) /
-          (#{strip-units($max-width)} - #{strip-units($min-width)})
+        (#{strip-units($max-size)} - #{strip-units($min-size)}) *
+        (100vw - #{$min-width}) /
+        (#{strip-units($max-width)} - #{strip-units($min-width)})
       );
     }
   }
