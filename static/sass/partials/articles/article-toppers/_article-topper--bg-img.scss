@@ -1,0 +1,56 @@
+.topper--bg-img {
+  @include reverse;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 90vh;
+  padding-bottom: 20px;
+  position: relative;
+
+  @include mq($bp-tablet-xl) {
+    padding-bottom: 40px;
+  }
+
+  &.topper--caption {
+    padding-bottom: 0;
+  }
+
+  .topper-hgroup {
+    margin-top: auto;
+    position: relative;
+    z-index: $z-index-1;
+  }
+
+  .article-asset {
+    @include absolute(0);
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+
+  &.topper--caption .article-asset {
+    bottom: $caption-height;
+    height: calc(100% - #{$caption-height});
+  }
+
+  .article-asset-mod {
+    margin: 0;
+  }
+
+  .article-caption {
+    @include breakout-site-padding;
+    @include site-padding;
+    @include selection;
+    background: $c-bg;
+    color: $c-base;
+    margin-top: 20px;
+
+    @include mq($bp-tablet-xl) {
+      margin-top: 40px;
+    }
+  }
+
+  .topper-asset-mod {
+    margin: 0;
+  }
+}

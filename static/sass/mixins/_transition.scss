@@ -1,0 +1,14 @@
+// Transitions
+// -------
+// USE: @include transition(color);
+
+@mixin transition($property: all, $time: 300ms, $ease: $timing-butter) {
+  @if length($property) == 2 {
+    transition: nth($property, 1) $time $ease, nth($property, 2) $time $ease;
+  } @else if length($property) == 3 {
+    transition: nth($property, 1) $time $ease, nth($property, 2) $time $ease,
+      nth($property, 3) $time $ease;
+  } @else {
+    transition: $property $time $ease;
+  }
+}

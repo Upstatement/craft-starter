@@ -1,0 +1,7 @@
+.visually-hidden {
+  @include hide;
+}
+
+.site-width {
+  @include site-padding;
+}

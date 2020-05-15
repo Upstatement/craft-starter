@@ -1,77 +1,175 @@
-// ---------------------------------------------------------------------------
-// HTML & Body
-// ---------------------------------------------------------------------------
+@charset "UTF-8";
+/* base
+================================================================= */
 
-html {
+/* Box model
+----------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+/* add selections colors
+----------------------------------------------------------------- */
+
+* {
+  @include selection;
 }
 
+/* HTML5 display definitions
+----------------------------------------------------------------- */
+
+/* Correct `block` display not defined in IE 6/7/8/9 and Firefox 3. */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/* Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3. */
+audio,
+canvas,
+video {
+  display: inline-block;
+  max-width: 100%;
+  *display: inline;
+  *zoom: 1;
+}
+/* Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/* Address styling not present in IE 7/8/9, Firefox 3, and Safari 4. Known issue:no IE 6 support. */
+[hidden] {
+  display: none !important;
+}
+/* Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11. */
+figure {
+  margin: 25px 0;
+}
+
+/* Base
+----------------------------------------------------------------- */
+
+/* 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using `em` units.
+   2. Prevent iOS text size adjust after orientation change, without disabling user zoom.
+   3. Normalize font rendering in Firefox */
+html {
+  font-size: 100%; /* 1 */
+  /* stylelint-disable */
+  -moz-osx-font-smoothing: #666666; /* 3 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  /* stylelint-enable */
+}
+/* Address `font-family` inconsistency between `textarea` and other form elements. */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+/* Address margins handled incorrectly in IE 6/7. */
 body {
-  color: #000000;
-  background-color: #ffffff;
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 1em;
+  @include basic-text($c-base);
+  background-color: $c-bg;
+  margin: 0;
+
+  /* stylelint-disable */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  text-size-adjust: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
+  /* stylelint-enable */
 }
 
-// ---------------------------------------------------------------------------
-// Defaults
-// ---------------------------------------------------------------------------
+section {
+  margin: 0;
+}
 
+/* Embedded content
+----------------------------------------------------------------- */
+
+/* 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+   2. Improve image quality when scaled in IE 7. */
 img {
-  width: 100%;
+  border: 0;
+  -ms-interpolation-mode: bicubic; /* stylelint-disable-line property-no-vendor-prefix */
+}
+
+img,
+a img {
   height: auto;
+  width: 100%;
 }
 
-a {
-  text-decoration: none;
-  transition: color 0.15s;
+object,
+embed {
+  height: auto;
+  max-width: 100%;
+}
+/* Correct overflow displayed oddly in IE 9. */
+svg:not(:root) {
+  overflow: hidden;
 }
 
-// ---------------------------------------------------------------------------
-// Text highlight
-// ---------------------------------------------------------------------------
-
-::selection {
-  background: #accef7;
-  text-shadow: none;
+.svg-filters {
+  @include fixed(100% x x 100%);
+  @include size(0);
 }
 
-// ---------------------------------------------------------------------------
-// Skip to Content Link
-// ---------------------------------------------------------------------------
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-inner {
+  @include nav-space;
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Skip to content link
+// - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .skip-to-content {
   position: absolute;
-  top: auto;
   left: -999px;
   width: 1px;
   height: 1px;
   overflow: hidden;
-  z-index: -99;
+  z-index: -$z-index-10;
+  text-decoration: none;
+  color: $c-bg;
 
   &:focus,
   &:active {
-    color: #ffffff;
-    background-color: #000000;
+    background-color: $c-base;
     top: 0;
     left: 0;
     width: auto;
     height: auto;
     overflow: auto;
-    z-index: 99;
+    padding: 16px 20px;
+    z-index: $z-index-10;
   }
+}
+
+#content {
+  outline: 0;
+  flex-grow: 1;
+}
+
+*:first-child {
+  margin-top: 0;
 }

@@ -1,0 +1,21 @@
+.article__byline {
+  @include article-alignment;
+  margin-bottom: 35px;
+}
+
+.article__byline__author,
+.article__byline__date {
+  display: inline-block;
+}
+
+.article__byline__author {
+  margin-right: $spacing-sm;
+
+  a {
+    @include subtle-link;
+  }
+}
+
+.article__byline__date {
+  color: $c-secondary;
+}

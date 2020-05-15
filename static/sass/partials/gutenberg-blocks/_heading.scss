@@ -1,0 +1,49 @@
+%gutenberg-component-styles {
+  h1 {
+    @include article-h1;
+  }
+
+  h2 {
+    @include article-h2;
+  }
+
+  h3 {
+    @include article-h3;
+  }
+
+  h4 {
+    @include article-h4;
+  }
+
+  h5 {
+    @include article-h5;
+  }
+
+  h6 {
+    @include article-h6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6 {
+      margin-top: $spacing-sm;
+
+      @include mq($bp-tablet-xl) {
+        margin-top: $spacing-md;
+      }
+    }
+
+    + p {
+      margin-top: $spacing-xs;
+    }
+  }
+}

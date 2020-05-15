@@ -1,0 +1,93 @@
+@mixin font-face($family-name, $file-name, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    $font-path: '/static/fonts/#{$file-name}';
+    font-display: auto;
+    font-family: '#{$family-name}';
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url($font-path+'.woff') format('woff'), url($font-path+'.eot?') format('embedded-opentype'),
+      url($font-path+'.woff2') format('woff2'), url($font-path+'.ttf') format('truetype');
+  }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// GT America
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Thin,
+  $font-weight: 200
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Thin-Italic,
+  $font-style: italic,
+  $font-weight: 200
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Light,
+  $font-weight: 300
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Light-Italic,
+  $font-style: italic,
+  $font-weight: 300
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Regular,
+  $font-weight: 400
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Regular-Italic,
+  $font-style: italic,
+  $font-weight: 400
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Medium,
+  $font-weight: 500
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Medium-Italic,
+  $font-style: italic,
+  $font-weight: 500
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Bold,
+  $font-weight: 700
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Bold-Italic,
+  $font-style: italic,
+  $font-weight: 700
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Black,
+  $font-weight: 900
+);
+
+@include font-face(
+  $family-name: GT America,
+  $file-name: GT-America/GT-America-Standard-Black-Italic,
+  $font-style: italic,
+  $font-weight: 900
+);

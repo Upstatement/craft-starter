@@ -1,0 +1,137 @@
+%gutenberg-component-styles {
+  /*
+    See Gutenberg's default styles for core gallery block https://github.com/WordPress/gutenberg/blob/39026257fc8ae53c889482de2040e007ef6ec539/packages/block-library/src/gallery/style.scss
+  */
+  .wp-block-gallery {
+    max-width: none;
+
+    &.aligncenter {
+      @include article-alignment;
+    }
+  }
+
+  .blocks-gallery-caption {
+    width: 100%;
+  }
+
+  .blocks-gallery-grid {
+    // adds negative bottom margin to offset .blocks-gallery-item bottom margin
+    @include margin(0 x #{-$article-asset-spacing});
+    width: 100%;
+  }
+
+  // adds a black border around full width galleries cause they
+  // look wierd when the go to the edge. If keeping them the same,
+  // color as the article background remove the margin bottom and
+  // padding top below.
+  .alignfull .blocks-gallery-grid {
+    background: $c-base;
+    margin-bottom: 0;
+    padding: $article-asset-spacing $article-asset-spacing 0;
+  }
+
+  .wp-block-gallery,
+  .blocks-gallery-grid {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+
+    .blocks-gallery-image,
+    .blocks-gallery-item {
+      // Add space between thumbnails, and unset right most thumbnails later.
+      margin: 0 $article-asset-spacing $article-asset-spacing 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      // If there is an orphan image, this makes it go full width
+      flex-grow: 1;
+
+      .js-modal-gallery__trigger {
+        width: 100%;
+      }
+
+      .article-asset-mod,
+      figure {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+
+        // IE doesn't support flex so omit that.
+        @supports (position: sticky) {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-start;
+        }
+      }
+
+      video,
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      figcaption {
+        @include hide;
+      }
+    }
+
+    // Cropped
+    &.is-cropped .blocks-gallery-image,
+    &.is-cropped .blocks-gallery-item {
+      .js-modal-gallery__trigger {
+        height: 100%;
+      }
+
+      a,
+      video,
+      img {
+        // IE11 doesn't support object-fit, so just make sure images aren't skewed.
+        // The following rules are for all browsers.
+        width: 100%;
+
+        // IE11 doesn't read rules inside this query. They are applied only to modern browsers.
+        @supports (position: sticky) {
+          height: 100%;
+          flex: 1;
+          object-fit: cover;
+        }
+      }
+    }
+
+    // On mobile and responsive viewports, we allow only 1 or 2 columns at the most.
+    .blocks-gallery-image,
+    .blocks-gallery-item {
+      width: calc(50% - #{$article-asset-spacing});
+
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
+    }
+
+    // Last item always needs margins reset.
+    .blocks-gallery-image:last-child,
+    .blocks-gallery-item:last-child {
+      margin-right: 0;
+    }
+
+    // Apply max-width to floated items that have no intrinsic width.
+    &.alignleft,
+    &.alignright {
+      max-width: $article-max / 2;
+      width: 100%;
+    }
+
+    // If the gallery is centered, center the content inside as well.
+    &.aligncenter {
+      .blocks-gallery-item figure {
+        justify-content: center;
+      }
+    }
+  }
+}

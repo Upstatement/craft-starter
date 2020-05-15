@@ -1,0 +1,39 @@
+// Make sure container has site padding
+%gutenberg-layout-container {
+  @include site-padding(true);
+}
+
+%gutenberg-component-styles {
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // Alignment
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  @include align-article-blocks;
+  @include clearfix;
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // Cross-block text styles
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  a {
+    @include link;
+  }
+
+  // styles for code not nested under a pre tag
+  *:not(pre) code {
+    background-color: $c-inline-code-bg;
+    color: $c-inline-code;
+    border-radius: 3px;
+    font-size: inherit;
+    font-size: 0.9em;
+    padding: 0 0.3em;
+    box-decoration-break: clone;
+  }
+
+  // treat inline images as emoji
+  .wp-rich-text-inline-image {
+    height: 1.5em;
+    margin: -1.2em 0 -0.3em;
+    width: auto !important; // override the default width
+  }
+}

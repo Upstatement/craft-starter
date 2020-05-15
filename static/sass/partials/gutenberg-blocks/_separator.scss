@@ -1,0 +1,7 @@
+%gutenberg-component-styles {
+  .wp-block-separator {
+    @include block-spacing-md;
+    background: $c-base;
+    clear: both;
+  }
+}

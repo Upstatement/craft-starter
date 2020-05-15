@@ -1,0 +1,50 @@
+.menu {
+  @include fixed(0);
+  @include nav-space;
+  @include reverse;
+  display: none;
+  z-index: $z-index-9;
+
+  @include mq(max, $bp-mobile-menu) {
+    .js--menu-active & {
+      display: block;
+    }
+  }
+}
+
+.menu-logo-link {
+  display: block;
+
+  &:hover,
+  &:focus {
+    color: $c-secondary;
+  }
+
+  .light-nav & {
+    color: $c-bg;
+
+    &:hover,
+    &:focus {
+      color: $c-reverse-secondary;
+    }
+  }
+}
+
+.menu-items {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: block;
+  font-size: $fs-md;
+}
+
+.menu-item-link {
+  @include subtle-link($active: $c-reverse-secondary);
+
+  // add underline to current page
+  &.active {
+    box-shadow: 0 -1px inset;
+  }
+}

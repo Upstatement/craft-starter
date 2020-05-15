@@ -1,0 +1,15 @@
+%gutenberg-component-styles {
+  p.dropcap,
+  p.has-drop-cap {
+    &::first-letter {
+      background: $c-base;
+      color: $c-bg;
+      float: left;
+      font-size: 2.3em;
+      font-weight: $fw-black;
+      line-height: 0.83em;
+      margin: 0.2em 0.4em 0 0;
+      padding: 0.71em;
+    }
+  }
+}

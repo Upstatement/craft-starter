@@ -1,0 +1,19 @@
+// This mixin can be used to increment the transition or animation delay of sibling elements using the :nth-child(n) selector, most commonly <li>'s in a <ul>.
+// -------
+// Parameter Definitions
+// $offset = the time between transitions / animations
+// $count = the number of items animating
+// $delay = adds a delay to the series of animations
+// $type = specifies the type of delay. This can be either transition or animation.
+// see http://codepen.io/nathanhass/pen/LVVxwg
+// USE: @include increment-delay();
+
+@mixin increment-delay($offset: 0.1s, $count: 10, $delay: 0, $type: transition) {
+  @for $i from 1 through $count {
+    $time: ($i * $offset) + $delay;
+
+    &:nth-child(#{$i}) {
+      #{$type}-delay: $time;
+    }
+  }
+}

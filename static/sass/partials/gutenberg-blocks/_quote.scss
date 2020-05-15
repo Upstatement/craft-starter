@@ -1,0 +1,28 @@
+// wordpress calls "blockquotes" "quotes"
+
+%gutenberg-component-styles {
+  .wp-block-quote {
+    @include block-spacing-md;
+    border-left: 1px solid;
+    color: $c-secondary;
+    padding-left: $spacing-lg;
+
+    @include mq($bp-tablet-xl) {
+      padding-left: $spacing-xl;
+    }
+
+    cite {
+      position: relative;
+      display: block;
+      margin: $font-margin-base;
+      padding-left: 1.3em;
+      font-style: normal;
+
+      &::before {
+        @include absolute(x x x 0);
+        content: '—';
+        display: block;
+      }
+    }
+  }
+}

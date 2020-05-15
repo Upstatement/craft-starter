@@ -1,0 +1,25 @@
+// Helper functions
+
+// Auto Shorthand
+@function auto($value) {
+  @if $value == 'a' {
+    @return auto;
+  } @else {
+    @return $value;
+  }
+}
+
+// Strip Units
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Shade Colors
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
+}
+
+// Tint Colors
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}

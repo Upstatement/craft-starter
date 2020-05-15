@@ -1,0 +1,113 @@
+$cropped-aspect-ratio: 1/1;
+
+%gutenberg-component-styles {
+  .ups-block__asym-grid {
+    &:not(.aligncenter) {
+      max-width: none;
+    }
+
+    .assets {
+      display: flex;
+      justify-content: space-between;
+      margin-left: -$article-asset-spacing;
+
+      > * {
+        padding-left: $article-asset-spacing;
+      }
+    }
+
+    .lead-asset {
+      width: 66.66%;
+    }
+
+    .small-assets {
+      width: 33.33%;
+
+      > :not(:first-child) {
+        margin-top: $article-asset-spacing;
+      }
+    }
+
+    .article-asset {
+      width: 100%;
+    }
+
+    &.is-cropped {
+      .lead-asset,
+      .small-assets {
+        .article-asset-mod {
+          position: relative;
+
+          &:before {
+            content: '';
+            display: block;
+            padding-top: 100% * $cropped-aspect-ratio;
+          }
+        }
+
+        img,
+        video {
+          @include absolute(0);
+          @include size(100%);
+          object-fit: cover;
+        }
+      }
+    }
+
+    &.alignfull {
+      background: $c-base;
+      padding: $article-asset-spacing;
+    }
+  }
+
+  .ups-block__row {
+    $image-band-max: 6;
+
+    &:not(.aligncenter) {
+      max-width: none;
+    }
+
+    .assets {
+      display: flex;
+      justify-content: space-between;
+      margin-left: -$article-asset-spacing;
+
+      > * {
+        padding-left: $article-asset-spacing;
+      }
+    }
+
+    @for $i from 1 through $image-band-max {
+      .asset-count--#{$i} {
+        .asset-aspect-ratio {
+          width: 100% / $i;
+          margin: 0;
+        }
+      }
+    }
+
+    &.is-cropped {
+      .article-asset-mod {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 100% * $cropped-aspect-ratio;
+        }
+      }
+
+      img,
+      video {
+        @include absolute(0);
+        @include size(100%);
+        object-fit: cover;
+      }
+    }
+
+    &.alignfull {
+      background: $c-base;
+      padding: $article-asset-spacing;
+    }
+  }
+}

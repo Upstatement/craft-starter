@@ -1,0 +1,12 @@
+@mixin reset-input {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}

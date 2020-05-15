@@ -1,0 +1,67 @@
+%gutenberg-component-styles {
+  .wp-block-file {
+    @include block-spacing-sm;
+    position: relative;
+    padding: $spacing-md;
+    overflow: hidden;
+
+    // styles download button
+    .wp-block-file__button {
+      @include secondary-button(
+        $base: $c-bg transparent,
+        $hover: $c-base $c-bg,
+        $active: $c-secondary $c-bg
+      );
+      float: right;
+      margin-left: $spacing-md;
+      position: relative;
+      z-index: $z-index-1;
+    }
+
+    // adds a lil folder in front
+    &::before {
+      content: '📁';
+      margin-right: 0.5em;
+    }
+
+    // Set hover style on parent. This is usually bad, but the link has
+    // an absolutely positioned after element that makes it work
+    &:hover,
+    &:focus-within {
+      a:not(.wp-block-file__button) {
+        color: $c-bg;
+        background: transparent;
+        box-shadow: none;
+
+        &::before {
+          background-color: $c-base-tint-80;
+        }
+      }
+    }
+
+    // the primary link has no class, so we have to style like this
+    a:not(.wp-block-file__button) {
+      color: $c-bg;
+
+      &:active {
+        color: $c-reverse-secondary;
+      }
+
+      // adds before element for bg color z-indexed under everything else
+      &::before {
+        @include absolute(0);
+        content: '';
+        background-color: $c-base;
+        border: 1px solid $c-base;
+        border-radius: 3px;
+        z-index: -1;
+      }
+
+      // adds after element to trigger hover
+      &::after {
+        @include absolute(0);
+        content: '';
+      }
+    }
+  }
+}

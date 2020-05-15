@@ -1,0 +1,85 @@
+.footer {
+  @include site-padding();
+  @include reverse;
+}
+
+.footer__primary {
+  @include site-padding($direction: vert);
+}
+
+.footer__logo-link {
+  @include color-link(currentColor, $c-reverse-spot, $c-reverse-secondary);
+}
+
+.footer__logo {
+  display: block;
+  height: 30px;
+  margin-bottom: -$spacing-sm; // compensate for the descender
+  width: 160px;
+
+  @include mq($bp-mobile-menu) {
+    height: 33px;
+    width: 175px;
+  }
+}
+
+.footer__copyright {
+  @include tiny-text($lh: inherit);
+  padding-bottom: 4px; // tweak for optical spacing
+  margin-top: $spacing-md;
+
+  @include mq($bp-tablet) {
+    margin-top: 0;
+  }
+
+  a {
+    @include subtle-link($active: $c-reverse-secondary);
+  }
+}
+
+.footer__primary-nav__list {
+  @include site-padding($direction: top);
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.footer__primary-nav__item-link {
+  @include subtle-link($active: $c-reverse-secondary);
+}
+
+.footer__secondary {
+  @include padding($spacing-sm x);
+  border-top: $border-reverse-light;
+  line-height: 1;
+
+  @include mq($bp-tablet) {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__social-list {
+  line-height: 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.footer__social-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $spacing-sm;
+  }
+}
+
+.footer__social-item__link {
+  @include color-link(currentColor, $c-reverse-spot, $c-reverse-secondary);
+}
+
+.footer__social-item__icon {
+  @include size(1.3em);
+  display: block;
+}

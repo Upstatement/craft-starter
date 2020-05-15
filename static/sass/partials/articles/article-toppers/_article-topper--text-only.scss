@@ -1,0 +1,11 @@
+// no image topper
+.topper--text-only {
+  + .article-body .article__byline {
+    border-top: 1px solid;
+    padding-top: 35px;
+  }
+
+  .topper-hgroup > * {
+    @include article-alignment();
+  }
+}

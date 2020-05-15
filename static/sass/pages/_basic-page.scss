@@ -1,0 +1,7 @@
+.basic-page__body {
+  @extend %gutenberg-layout-container;
+}
+
+.basic-page__body-width {
+  @extend %gutenberg-component-styles;
+}

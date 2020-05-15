@@ -1,0 +1,149 @@
+%gutenberg-component-styles {
+  .wp-block-table {
+    @include block-spacing-md;
+    width: 100%;
+    color: $c-base;
+
+    &::-webkit-scrollbar {
+      appearance: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 3px solid $c-bg;
+      background-color: $c-base-tint-10;
+    }
+  }
+
+  /* ==========================================================================
+
+   Components -> Table
+
+   ========================================================================== */
+
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+
+    @include mq($bp-tablet-xl) {
+      border: 1px solid $c-table-border;
+    }
+  }
+
+  thead {
+    @include smallcaps;
+    @include padding($spacing-xs);
+    background-color: $c-table-head-bg;
+    color: $c-table-head;
+
+    @include mq(max, $bp-tablet-xl) {
+      display: none;
+    }
+  }
+
+  thead th {
+    text-align: left;
+  }
+
+  tr {
+    border: 1px solid $c-table-border;
+    border-width: 1px 0 0;
+    margin-top: 0;
+
+    @include mq($bp-tablet-xl) {
+      border-width: 0;
+    }
+  }
+
+  tbody tr {
+    @include mq(max, $bp-tablet-xl) {
+      padding: 10px;
+      display: block;
+    }
+
+    &:nth-child(odd) {
+      background: $c-table-stripes;
+    }
+  }
+
+  thead td,
+  thead th,
+  tbody td {
+    margin-top: 0;
+    padding-top: 0;
+
+    @include mq($bp-tablet-xl) {
+      @include padding($spacing-sm $spacing-sm $spacing-sm #{$spacing-sm + 3});
+    }
+  }
+
+  tbody td {
+    line-height: 1.3;
+
+    @include mq(max, $bp-tablet-xl) {
+      display: flex;
+      padding: 0;
+    }
+
+    @include mq($bp-tablet-xl) {
+      line-height: inherit;
+    }
+  }
+
+  td {
+    border: 0;
+    vertical-align: top;
+
+    @include mq(max, $bp-tablet-xl) {
+      width: 100% !important;
+      display: block;
+      font-size: $fs-xxs;
+    }
+
+    @include mq($bp-tablet-xl) {
+      @include padding(18px 0);
+      display: table-cell;
+      width: auto;
+    }
+
+    + td {
+      @include mq(max, $bp-tablet-xl) {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: $border-light;
+      }
+    }
+
+    &::before {
+      font-weight: $fw-med;
+      content: attr(data-th);
+      display: block;
+      color: $c-base;
+      width: 33.33%;
+      padding-right: 10px;
+
+      @include mq($bp-tablet-xl) {
+        display: none;
+      }
+    }
+  }
+
+  .overflow {
+    overflow-x: auto;
+  }
+
+  .cell-contents {
+    @include mq(max, $bp-tablet-xl) {
+      width: 66.66%;
+    }
+  }
+
+  tbody {
+    background: $c-bg;
+    @include mq(max, $bp-tablet-xl) {
+      border: 1px solid $c-table-border;
+      border-width: 3px 1px 1px;
+    }
+  }
+}

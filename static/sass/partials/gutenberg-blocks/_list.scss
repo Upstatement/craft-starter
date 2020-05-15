@@ -1,0 +1,11 @@
+%gutenberg-component-styles {
+  ul {
+    &:not(.blocks-gallery-grid):not(.ups-block__related-articles__list) {
+      @include ul;
+    }
+  }
+
+  ol {
+    @include ol;
+  }
+}

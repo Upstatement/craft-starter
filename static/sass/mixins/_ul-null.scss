@@ -1,0 +1,10 @@
+// Kill UL
+// -------
+// FOR: Removing borders, shadows, and outlines for inputs
+// USE: @include ul-null;
+
+@mixin ul-null {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

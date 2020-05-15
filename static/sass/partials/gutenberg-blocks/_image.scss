@@ -1,0 +1,30 @@
+%gutenberg-component-styles {
+  .wp-block-image {
+    position: relative;
+    max-width: initial;
+  }
+
+  .wp-block-image {
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  figcaption {
+    @include caption;
+    margin-top: $article-asset-spacing;
+
+    .article-align-center & {
+      text-align: center;
+    }
+  }
+
+  .alignfull {
+    figcaption {
+      @include site-padding();
+    }
+  }
+}

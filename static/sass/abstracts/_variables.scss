@@ -1,0 +1,263 @@
+// Color Variables
+// - - - - - - - - - - - - - - -
+
+$c-black: #000000;
+$c-white: #ffffff;
+$c-yellow: #ffff00;
+$c-red: #ff0000;
+$c-pink: #f7c9c9;
+
+// base
+$c-base: $c-black;
+$c-bg: $c-white;
+$c-spot: $c-red;
+$c-reverse-spot: $c-pink;
+
+// tints
+$c-base-tint-5: rgba($c-base, 0.05);
+$c-base-tint-10: rgba($c-base, 0.1);
+$c-base-tint-30: rgba($c-base, 0.3);
+$c-base-tint-50: rgba($c-base, 0.5);
+$c-base-tint-60: rgba($c-base, 0.6);
+$c-base-tint-80: rgba($c-base, 0.8);
+
+$c-bg-tint-5: rgba($c-bg, 0.05);
+$c-bg-tint-10: rgba($c-bg, 0.1);
+$c-bg-tint-30: rgba($c-bg, 0.3);
+$c-bg-tint-50: rgba($c-bg, 0.5);
+$c-bg-tint-60: rgba($c-bg, 0.6);
+$c-bg-tint-80: rgba($c-bg, 0.8);
+
+// applications
+$c-secondary: $c-base-tint-60;
+$c-reverse-secondary: $c-bg-tint-60;
+$c-wrapper-bg: $c-bg;
+$c-border: $c-base;
+$c-border-light: $c-base-tint-30;
+$c-border-reverse: $c-bg;
+$c-border-reverse-light: $c-bg-tint-30;
+$c-highlight-tag: $c-yellow;
+$c-select: $c-bg;
+$c-select-bg: $c-black;
+$c-disabled: $c-secondary;
+
+// reverse
+$c-reverse: $c-bg;
+$c-reverse-bg: $c-base;
+$c-reverse-select: $c-black;
+$c-reverse-select-bg: $c-bg;
+
+// Link
+$c-link: $c-base;
+$c-link-hover: $c-spot;
+$c-link-active: $c-secondary;
+
+// Code
+$c-code: $c-bg;
+$c-code-bg: $c-base;
+$c-inline-code: $c-base;
+$c-inline-code-bg: $c-base-tint-10;
+
+// Code
+$c-table-border: $c-border;
+$c-table-head: $c-bg;
+$c-table-head-bg: $c-base;
+$c-table-th-border: $c-border;
+$c-table-stripes: $c-base-tint-5;
+
+// Form
+$c-input-focus-border: $c-border;
+$c-button-bg: transparent;
+$c-button-text: $c-base;
+$c-button-primary-bg: $c-base;
+$c-button-primary-text: $c-bg;
+$c-placeholder-text: rgba($c-base, 0.4);
+
+// Grid
+$c-grid-color: $c-red;
+
+// Typography & Vertical Whitespace
+// -------
+
+// Font Family
+$ff-sans: 'GT America', sans-serif;
+$ff-serif: serif;
+$ff-monospace: monospace;
+$sans: $ff-sans;
+$serif: $ff-serif;
+
+// Applications
+$ff-base: $sans;
+$ff-body: $sans;
+$ff-heading: $sans;
+$ff-branding: $sans;
+
+// Font Weights
+$fw-thin: 100;
+$fw-light: 200;
+$fw-reg: 300;
+$fw-med: 500;
+$fw-bold: 700;
+$fw-black: 900;
+
+// Font Size
+$fs-xxxs: 12px;
+$fs-xxs: 14px;
+$fs-xs: 16px;
+$fs-sm: 20px;
+$fs-md: 24px;
+$fs-lg: 28px;
+$fs-xl: 36px;
+$fs-xxl: 60px;
+$fs-xxxl: 72px;
+
+// applications
+$fs-base: $fs-xs;
+$fs-base-plus: $fs-sm;
+
+$fs-smallcap-min: 11px;
+$fs-smallcap-max: 13px;
+
+$fs-h6-min: $fs-xxxs;
+$fs-h6-max: $fs-xxs;
+
+$fs-h5-min: $fs-xs;
+$fs-h5-max: $fs-sm;
+
+$fs-h4-min: $fs-sm;
+$fs-h4-max: $fs-lg;
+
+$fs-h3-min: $fs-md;
+$fs-h3-max: $fs-xl;
+
+$fs-h2-min: $fs-lg;
+$fs-h2-max: $fs-xxl;
+
+$fs-h1-min: $fs-xl;
+$fs-h1-max: $fs-xxxl;
+
+$fs-mono: $fs-xxxs;
+
+$fs-monospace: 14px;
+
+// Line Height
+$lh-base: 1.55;
+$lh-tiny: 1;
+$lh-small: 1.2;
+$lh-smallcap: 1.2;
+$lh-h6: $lh-small;
+$lh-h5: $lh-small;
+$lh-h4: $lh-small;
+$lh-h3: $lh-small;
+$lh-h2: $lh-small;
+$lh-h1: $lh-small;
+$lh-jumbo: $lh-tiny;
+$lh-mono: 1.2;
+
+// Margins
+$spacing-xxs: 5px;
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 18px;
+$spacing-lg: 24px;
+$spacing-xl: 36px;
+$spacing-xxl: 60px;
+$spacing-xxxl: 120px;
+$spacing-xxxxl: 160px;
+
+// Margin & Padding
+$font-margin-base: $spacing-md 0 0;
+$font-margin-h6: $spacing-xxl 0 0;
+$font-margin-h5: $spacing-xxl 0 0;
+$font-margin-h4: $spacing-xxl 0 0;
+$font-margin-h3: $spacing-xxl 0 0;
+$font-margin-h2: $spacing-xxl 0 0;
+$font-margin-h1: $spacing-xxl 0 0;
+
+// applications
+$font-margin-blockquote: 1em 40px;
+$font-margin-hgroup: $font-margin-base;
+$font-margin-list: $font-margin-base;
+$font-padding-list: 0 0 0 40px;
+$font-margin-dd: 0 0 0 40px;
+$font-padding-code: 0.2em 0.4em;
+$font-margin-code: 30px 0;
+$article-asset-spacing: $spacing-sm;
+
+// Tables
+$table-margin: 35px 0;
+$table-padding: 0.5em 1em;
+$table-caption-padding: 0 0 10px;
+
+// Forms
+$form-margin: 0;
+$form-legend-margin: 0 0 20px;
+$form-legend-padding: 0 0 4px;
+$form-fieldset-margin: 30px 0;
+$form-label-margin: 0.5em 0 0.2em;
+$form-row-margin: 0 0 10px;
+$form-input-margin: 0.25em 0;
+$form-input-padding: 0.5em 0.6em;
+$form-button-padding: 0.9em 15px;
+
+// Widths
+$one-col: 8.3333333333333%;
+$two-col: 16.6666666666666%;
+$three-col: 25%;
+$four-col: 33.3333333333333%;
+$five-col: 41.6666666666666%;
+$six-col: 50%;
+$seven-col: 58.3333333333333%;
+$eight-col: 66.6666666666666%;
+$nine-col: 75%;
+$ten-col: 83.3333333333333%;
+$eleven-col: 91.6666666666666%;
+$twelve-col: 100%;
+
+// grid
+$grid-gutter: 20px;
+$grid-padding: $grid-gutter / 2;
+$grid-padding-mobile: 5vw;
+$spacing-row: -$grid-padding;
+
+// Breakpoints
+$bp-mobile: 300px;
+$bp-phablet: 400px;
+$bp-tablet: 600px;
+$bp-tablet-xl: 768px;
+$bp-desktop: 1070px;
+$bp-desktop-xl: 1200px;
+$bp-desktop-xxl: 1500px;
+$bp-desktop-xxxl: 1700px;
+
+// Application specific breakpoints
+$bp-mobile-menu: $bp-tablet-xl;
+
+// z-index
+$z-index-0: 0;
+$z-index-1: 10;
+$z-index-2: 20;
+$z-index-3: 30;
+$z-index-4: 40;
+$z-index-5: 50;
+$z-index-6: 60;
+$z-index-7: 70;
+$z-index-8: 80;
+$z-index-9: 90;
+$z-index-10: 100;
+
+// Borders
+$border: 1px solid $c-border;
+$border-light: 1px solid $c-border-light;
+$border-reverse: 1px solid $c-border-reverse;
+$border-reverse-light: 1px solid $c-border-reverse-light;
+
+// Timing
+$timing: cubic-bezier(0.645, 0.045, 0.355, 1);
+$timing-butter: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$article-max: 800px;
+$site-max: 1400px;
+$nav-height: 100px;
+
+$transition: 0.2s $timing;

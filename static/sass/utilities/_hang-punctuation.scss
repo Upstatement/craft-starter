@@ -1,0 +1,47 @@
+// hanging punctuation
+
+.hang-punc-header-small,
+.hang-punc-small {
+  text-indent: -0.175em;
+}
+
+.hang-punc-header-medium,
+.hang-punc-medium {
+  text-indent: -0.35em;
+}
+
+.hang-punc-header-large,
+.hang-punc-large {
+  text-indent: -0.45em;
+}
+
+// Only hang quotes on the first paragrph of blockquotes and pullquotes
+.wp-block-quote,
+.wp-block-pullquote {
+  &.hang-punc-header-small,
+  &.hang-punc-small {
+    text-indent: 0;
+
+    p {
+      text-indent: -0.175em;
+    }
+  }
+
+  &.hang-punc-header-medium,
+  &.hang-punc-medium {
+    text-indent: 0;
+
+    p {
+      text-indent: -0.35em;
+    }
+  }
+
+  &.hang-punc-header-large,
+  &.hang-punc-large {
+    text-indent: 0;
+
+    p {
+      text-indent: -0.45em;
+    }
+  }
+}

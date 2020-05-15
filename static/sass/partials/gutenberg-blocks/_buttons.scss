@@ -1,0 +1,32 @@
+%gutenberg-component-styles {
+  .wp-block-buttons {
+    margin-top: $spacing-md;
+    margin-bottom: -$spacing-md; // compensate for extra button spacing
+  }
+
+  .wp-block-button {
+    display: inline-block;
+    margin-bottom: $spacing-md;
+    margin-right: $spacing-md;
+
+    a {
+      display: block;
+    }
+  }
+
+  .wp-block-button:not(.is-style-outline) {
+    a {
+      @include button(
+        $base: $c-bg $c-base,
+        $hover: $c-reverse $c-spot,
+        $active: $c-reverse-secondary $c-spot
+      );
+    }
+  }
+
+  .wp-block-button.is-style-outline {
+    a {
+      @include secondary-button;
+    }
+  }
+}

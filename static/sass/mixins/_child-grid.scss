@@ -1,0 +1,77 @@
+// Child Grid
+// -------
+// FOR: Adding grid padding and column width to content blocks
+// USE: @include grid-parent;
+
+@mixin grid-parent {
+  padding-left: $grid-padding-mobile;
+  padding-right: $grid-padding-mobile;
+
+  @include mq($bp-tablet-xl) {
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+  }
+}
+
+@mixin grid-child {
+  @include mq($bp-tablet-xl) {
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+  }
+}
+
+@mixin vertical-spacing {
+  margin-bottom: 90px;
+
+  @include mq($bp-tablet-xl) {
+    margin-bottom: 120px;
+  }
+
+  @include mq($bp-desktop) {
+    margin-bottom: 150px;
+  }
+
+  @include mq($bp-desktop-xl) {
+    margin-bottom: 180px;
+  }
+}
+
+@mixin vertical-component {
+  padding-bottom: 48px;
+  padding-top: 48px;
+
+  @include mq($bp-tablet-xl) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  @include mq($bp-desktop-xl) {
+    padding-bottom: 90px;
+    padding-top: 90px;
+  }
+
+  @include mq($bp-desktop-xxxl) {
+    padding-bottom: 120px;
+    padding-top: 120px;
+  }
+}
+
+@mixin vertical-component-null {
+  padding-bottom: 0;
+  padding-top: 0;
+
+  @include mq($bp-tablet-xl) {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  @include mq($bp-desktop-xl) {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  @include mq($bp-desktop-xxl) {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}

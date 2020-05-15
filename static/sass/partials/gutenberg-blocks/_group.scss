@@ -1,0 +1,11 @@
+%gutenberg-component-styles {
+  .wp-block-group {
+    @include breakout-site-padding;
+    @include site-padding;
+    max-width: none;
+
+    .wp-block-group__inner-container {
+      @include align-article-blocks;
+    }
+  }
+}

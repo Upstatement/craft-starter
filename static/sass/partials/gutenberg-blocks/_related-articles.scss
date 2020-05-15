@@ -1,0 +1,52 @@
+%gutenberg-component-styles {
+  .ups-block__related-articles:not(.alignleft):not(.alignright) {
+    @include block-spacing-md;
+  }
+
+  .ups-block__related-articles.alignleft,
+  .ups-block__related-articles.alignright {
+    @include block-spacing-sm;
+  }
+
+  .ups-block__related-articles__head {
+    @include h5;
+    margin-top: 0;
+    padding-bottom: $spacing-xxs;
+  }
+
+  .ups-block__related-articles__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .ups-block__related-articles__link {
+    box-shadow: 0 -1px $c-border-light;
+    display: block;
+    padding: $spacing-xs $spacing-xxs;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      background-color: $c-base;
+      box-shadow: 0 -1px $c-base;
+      color: $c-bg;
+      z-index: $z-index-1;
+    }
+  }
+
+  // give it a border bottom
+  .ups-block__related-articles__item:last-child .ups-block__related-articles__link {
+    border-bottom: $border-light;
+
+    &:hover,
+    &:focus {
+      border-color: $c-base;
+    }
+  }
+
+  // make top border black
+  .ups-block__related-articles__item:first-child .ups-block__related-articles__link {
+    box-shadow: 0 -1px $c-base;
+  }
+}

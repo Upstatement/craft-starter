@@ -1,0 +1,44 @@
+$caption-height: 34px;
+
+.topper {
+  @include site-padding;
+  @include nav-space;
+
+  .article-caption {
+    @include caption;
+    margin-top: 0;
+    position: relative;
+    z-index: $z-index-1;
+  }
+
+  .article-caption-width {
+    @include padding(10px 20px 10px x);
+    box-shadow: 0 1px;
+  }
+
+  .topper-asset-mod {
+    line-height: 0;
+    margin-bottom: 0;
+  }
+
+  .topper-overline {
+    font-weight: $fw-black;
+  }
+
+  .topper-overline-link {
+    @include subtle-link;
+  }
+
+  .topper-hed {
+    font-weight: $fw-black;
+    max-width: 1200px;
+  }
+
+  .topper-dek {
+    max-width: 550px;
+  }
+
+  .article-asset {
+    width: 100%;
+  }
+}

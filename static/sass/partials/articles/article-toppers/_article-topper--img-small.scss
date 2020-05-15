@@ -1,0 +1,11 @@
+// topper img
+.topper--img {
+  .topper-hgroup,
+  .topper-asset-mod {
+    @include article-alignment;
+  }
+
+  .topper-hed {
+    @include fluid-font($tween-start: $fs-lg 400px, $tween-end: 48px 1400px);
+  }
+}

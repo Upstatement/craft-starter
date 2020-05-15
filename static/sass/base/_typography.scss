@@ -1,0 +1,240 @@
+// Links
+// -------
+
+// Improve readability when focused and also mouse hovered in all browsers.
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+.base-body a {
+  text-decoration: none;
+}
+
+// Typography
+// -------
+// Address font sizes and margins set differently in IE 6/7.
+// Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome.
+
+h1,
+.h1 {
+  @include h1;
+}
+
+h2,
+.h2 {
+  @include h2;
+}
+
+h3,
+.h3 {
+  @include h3;
+}
+
+h4,
+.h4 {
+  @include h4;
+}
+
+h5,
+.h5 {
+  @include h5;
+}
+
+h6,
+.h6 {
+  @include h6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: $font-margin-base;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-size: 0.75em;
+  font-weight: normal;
+}
+
+hgroup {
+  margin: $font-margin-hgroup;
+}
+// remove margins from headings within hgroup
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4,
+hgroup h5,
+hgroup h6,
+hgroup p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+// Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+// Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+b,
+strong {
+  font-weight: $fw-med;
+}
+
+blockquote {
+  margin: $font-margin-blockquote;
+}
+// Address styling not present in Safari 5 and Chrome.
+dfn {
+  font-style: italic;
+}
+// Address differences between Firefox and other browsers. Known issue:no IE 6/7 normalization.
+hr {
+  -moz-box-sizing: content-box; /* stylelint-disable-line property-no-vendor-prefix */
+  box-sizing: content-box;
+  height: 0;
+}
+// Address styling not present in IE 6/7/8/9.
+mark {
+  background-color: $c-base-tint-5;
+  color: $c-base;
+}
+// Address margins set differently in IE 6/7.
+p,
+pre {
+  margin: $font-margin-base;
+}
+// Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+code,
+kbd,
+pre,
+samp {
+  font-family: $ff-monospace;
+  font-size: $fs-base;
+}
+// Improve readability of pre-formatted text in all browsers.
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+// Address CSS quotes not supported in IE 6/7.
+q {
+  quotes: none;
+}
+// Address `quotes` property not supported in Safari 4.
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+// Address inconsistent and variable font size in all browsers.
+small {
+  font-size: 80%;
+}
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+s {
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    currentColor 55%,
+    currentColor calc(55% + 1px),
+    transparent calc(55% + 1px)
+  );
+  text-decoration: none;
+}
+// Always hide an element when it has the `hidden` HTML attribute.
+[hidden] {
+  display: none !important;
+}
+
+// Lists
+// -------
+
+// Address margins set differently in IE 6/7.
+dl,
+menu,
+ol,
+ul {
+  margin: $font-margin-list;
+}
+
+dd {
+  margin: $font-margin-dd;
+}
+// Address paddings set differently in IE 6/7.
+menu,
+ol,
+ul {
+  padding: $font-padding-list;
+}
+// Correct list images handled incorrectly in IE 7.
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  text-decoration: none;
+}
+// remove margin from nested lists
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin: 0;
+}
+
+// Code
+// -------
+
+.highlight {
+  background-color: $c-highlight-tag;
+}
+
+hr {
+  background-color: $c-base;
+  border: 0;
+  display: block;
+  height: 1px;
+  padding: 0;
+
+  @include block-spacing-md;
+}

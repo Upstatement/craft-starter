@@ -1,0 +1,17 @@
+// Min Height Breakpoint
+// -------
+// FOR: Adjusting styles for taller screen sizes
+// Write less verbose media queries.
+// USE: @include mq-height($bp-desktop);
+
+@mixin mq-height($bp-1, $bp-2: null) {
+  @if $bp-2 != 'null' {
+    @media (min-height: $bp-1) and (min-width: $bp-2) {
+      @content;
+    }
+  } @else {
+    @media (min-height: $bp-1) {
+      @content;
+    }
+  }
+}

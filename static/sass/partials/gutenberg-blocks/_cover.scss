@@ -1,0 +1,47 @@
+%gutenberg-component-styles {
+  .wp-block-cover {
+    @include block-spacing-md;
+    background-position: 50% 50%;
+    color: $c-bg;
+    position: relative;
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .wp-block-cover__video-background {
+    @include absolute(0);
+    @include size(100%);
+    object-fit: cover;
+  }
+
+  .wp-block-cover__inner-container {
+    background: linear-gradient(25deg, rgba(0, 0, 0, 0.8), ease, rgba(0, 0, 0, 0.3) 75%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 80vh;
+    padding: $spacing-md;
+    pointer-events: none;
+    position: relative;
+    width: 100%;
+  }
+
+  .alignwide,
+  .alignfull {
+    .wp-block-cover__inner-container {
+      @include site-padding;
+      @include padding($spacing-xl x);
+
+      @include mq($bp-tablet-xl) {
+        @include padding($spacing-xxl x);
+      }
+
+      > * {
+        @include article-alignment;
+        width: 100%;
+      }
+    }
+  }
+}

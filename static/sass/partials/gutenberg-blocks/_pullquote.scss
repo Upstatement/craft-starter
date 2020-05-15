@@ -1,0 +1,83 @@
+%gutenberg-component-styles {
+  .wp-block-pullquote {
+    border: $border;
+    border-width: 1px 0;
+    max-width: none;
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    blockquote {
+      margin: auto;
+    }
+
+    cite {
+      display: block;
+      margin: $font-margin-base;
+      font-style: normal;
+      line-height: 1.2;
+      font-size: 0.8em;
+    }
+
+    p {
+      line-height: 1.2;
+    }
+
+    // styling everything that isnt floated left or right
+    &:not(.alignleft):not(.alignright) {
+      @include margin($spacing-xl x $spacing-xl x);
+      @include padding($spacing-xl x);
+      clear: both;
+
+      @include mq($bp-tablet-xl) {
+        @include margin($spacing-xxl x);
+        @include padding($spacing-xxl x);
+      }
+
+      p {
+        @include fluid-font($tween-start: $fs-md 400px, $tween-end: $fs-xxl 1400px);
+        font-weight: $fw-thin;
+      }
+
+      cite {
+        padding-left: 1.3em;
+        position: relative;
+
+        @include mq($bp-tablet-xl) {
+          margin-top: $spacing-xl;
+        }
+
+        &::before {
+          @include absolute(x x x 0);
+          content: '—';
+          display: block;
+          font-weight: $fw-bold;
+        }
+      }
+    }
+
+    // using color to separate quotes when full width or floated
+    &.alignleft,
+    &.alignright,
+    &.alignfull {
+      @include reverse;
+      border-width: 0;
+    }
+
+    //
+    &.alignleft,
+    &.alignright {
+      padding: $spacing-lg;
+
+      p {
+        font-weight: $fw-bold;
+      }
+    }
+
+    &.alignfull {
+      @include site-padding;
+      @include breakout-site-padding;
+    }
+  }
+}

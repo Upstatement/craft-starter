@@ -1,0 +1,55 @@
+%gutenberg-component-styles {
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // General embed styles
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  .wp-block-embed__wrapper {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .wp-block-embed:not(.alignleft):not(.alignright) {
+    @include block-spacing-md;
+  }
+
+  .wp-block-embed.alignleft,
+  .wp-block-embed.alignright {
+    @include block-spacing-sm;
+  }
+
+  // center other embeds by default
+  .article-align-center & .wp-block-embed__wrapper {
+    > * {
+      display: block;
+      margin: 0 auto !important;
+    }
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // Video embed styles
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  .wp-embed-aspect-16-9 {
+    .wp-block-embed__wrapper {
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: 9 / 16 * 100%;
+      }
+    }
+
+    iframe {
+      @include absolute(0);
+      @include size(100%);
+    }
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // Instagram embed styles
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  .wp-block-embed-instagram iframe {
+    max-width: none !important;
+  }
+}

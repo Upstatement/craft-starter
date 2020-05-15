@@ -1,0 +1,17 @@
+// bring in topper styles
+@import './article-toppers/index';
+
+// Assign styles from silent selectors in layout and blocks.
+// We use silent selectors so that classes can easily be added
+// or changed without needing to go into every block file.
+.article-body {
+  @extend %gutenberg-layout-container;
+}
+
+.article-body-width {
+  @extend %gutenberg-component-styles;
+}
+
+// Import non-block article components last. This should be done after
+// blocks as they typically need to overwrite article block styles.
+@import './article-body-components/index';

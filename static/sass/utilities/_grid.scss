@@ -1,0 +1,53 @@
+// Grid
+// -------
+
+.grid {
+  @include fixed(0 0 0 0);
+  @include site-padding;
+  display: none;
+  pointer-events: none;
+  z-index: 9999;
+
+  .show-grid & {
+    display: block;
+  }
+}
+
+.grid-inner {
+  margin-left: -$grid-padding;
+  margin-right: -$grid-padding;
+  min-height: 100vh;
+  pointer-events: none;
+
+  @include mq($bp-tablet-xl) {
+    background-color: transparent;
+    margin-left: -$grid-padding;
+    margin-right: -$grid-padding;
+  }
+
+  .grid-column {
+    float: left;
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+    pointer-events: none;
+    width: $three-col;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      display: block;
+    }
+
+    @include mq($bp-tablet-xl) {
+      display: block;
+      width: $one-col;
+    }
+  }
+
+  .grid-column--inner {
+    background-color: rgba($c-grid-color, 0.25);
+    display: block;
+    min-height: 100vh;
+  }
+}

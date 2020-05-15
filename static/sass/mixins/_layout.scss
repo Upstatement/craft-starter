@@ -1,0 +1,198 @@
+$padding-horiz--sm: 15px;
+$padding-horiz--lg: 40px;
+
+$padding-vert--sm: 30px;
+$padding-vert--lg: 40px;
+
+@mixin site-padding($vert: false, $horiz: true, $max: true, $direction: false) {
+  // allows you to specify a single direction & ignore other attributes
+  @if $direction == top {
+    padding-top: $padding-vert--sm;
+    @include mq($bp-tablet-xl) {
+      padding-top: $padding-vert--lg;
+    }
+  } @else if $direction == right {
+    padding-right: $padding-horiz--sm;
+    @include mq($bp-tablet-xl) {
+      padding-right: $padding-horiz--lg;
+    }
+  } @else if $direction == bottom {
+    padding-bottom: $padding-vert--sm;
+    @include mq($bp-tablet-xl) {
+      padding-bottom: $padding-vert--lg;
+    }
+  } @else if $direction == left {
+    padding-left: $padding-horiz--sm;
+    @include mq($bp-tablet-xl) {
+      padding-left: $padding-horiz--lg;
+    }
+  } @else if $direction == vert {
+    @include padding($padding-vert--sm x);
+    @include mq($bp-tablet-xl) {
+      @include padding($padding-vert--lg x);
+    }
+
+    // if no direction is specified, use other attributes
+  } @else {
+    // set vertical spacing | defaults to false
+    @if $vert == true {
+      @include padding($padding-vert--sm x);
+      @include mq($bp-tablet-xl) {
+        @include padding($padding-vert--lg x);
+      }
+    }
+
+    // set horizontal spacing | defaults to true
+    @if $horiz == true {
+      @include padding(x $padding-horiz--sm);
+      @include mq($bp-tablet-xl) {
+        @include padding(x $padding-horiz--lg);
+      }
+    }
+
+    // set max width | defaults to true
+    //
+    // this uses the padding max-width trick and relies on
+    // the $site-max variable defined in _variables.scss
+    @if $max == true {
+      @include mq(#{$site-max + $padding-vert--lg * 2}) {
+        @include padding(x calc(50vw - #{$site-max / 2}));
+      }
+    }
+  }
+}
+
+@mixin breakout-site-padding {
+  @include margin(x #{-$padding-horiz--sm});
+  @include mq($bp-tablet-xl) {
+    @include margin(x #{-$padding-horiz--lg});
+  }
+
+  @include mq(#{$site-max + $padding-horiz--lg * 2}) {
+    @include margin(x calc(-50vw + #{$site-max / 2}));
+  }
+}
+
+// carve out space for navigation
+@mixin nav-space {
+  @include fluid-size(
+    $properties: padding-top,
+    $tween-start: 100px $bp-tablet,
+    $tween-end: $spacing-xxxxl $bp-desktop
+  );
+}
+
+// article mixings
+@mixin article-alignment($max-width: true, $text-align: false) {
+  @if $max-width {
+    display: block;
+    max-width: $article-max;
+  }
+
+  .article-align-left & {
+    margin-left: 0;
+  }
+
+  .article-align-right & {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .article-align-center & {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @if $text-align {
+    .article-align-right & {
+      text-align: right;
+    }
+
+    .article-align-center & {
+      text-align: center;
+    }
+  }
+}
+
+// block spacing
+@mixin block-spacing-sm {
+  @include margin($spacing-md x);
+}
+
+@mixin block-spacing-md {
+  @include margin($spacing-xl x);
+
+  @include mq($bp-tablet-xl) {
+    @include margin($spacing-xxl x);
+  }
+}
+
+@mixin align-article-blocks {
+  > *,
+  .alignnone,
+  .aligncenter {
+    @include article-alignment;
+  }
+
+  // always clear floated elements
+  .alignleft,
+  .alignright,
+  .alignnone,
+  .aligncenter,
+  .alignfull,
+  .alignwide {
+    clear: both;
+  }
+
+  // set align center max width and alignment
+  .alignfull {
+    @include breakout-site-padding;
+  }
+
+  // add margin for all blocks that arent
+  .aligncenter,
+  .alignnone,
+  .alignwide,
+  .alignfull {
+    @include block-spacing-md;
+  }
+
+  .alignfull,
+  .alignwide {
+    max-width: initial;
+    position: relative;
+  }
+
+  .alignleft,
+  .alignright {
+    @include margin($spacing-md x);
+
+    // we start full width at mobile so things arent too small
+    @include mq($bp-tablet) {
+      width: 50%;
+
+      //compensate for lineheight with a lil extra margin top
+      @include margin(#{$spacing-md + $spacing-xs} x $spacing-md);
+    }
+
+    @include mq($bp-tablet-xl) {
+      width: 33%;
+    }
+  }
+
+  .alignright {
+    @include mq($bp-tablet) {
+      clear: right;
+      float: right;
+      margin-left: 30px;
+    }
+  }
+
+  .alignleft {
+    @include mq($bp-tablet) {
+      clear: left;
+      float: left;
+      margin-right: 30px;
+    }
+  }
+}

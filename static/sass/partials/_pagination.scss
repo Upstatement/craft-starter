@@ -1,0 +1,70 @@
+// - - - - - - - - - - - - - - -------------------------------------------------------------
+// Pagination
+// - - - - - - - - - - - - - - -------------------------------------------------------------
+
+.pagination {
+  @include site-padding($direction: top);
+  border-top: $border-light;
+  margin-top: $spacing-xl;
+  padding-top: $spacing-xl;
+}
+
+.pagination__link {
+  @include subtle-link;
+  @include margin(0 $spacing-xs);
+  display: block;
+}
+
+.pagination__list {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__list-item {
+  position: relative;
+
+  &.selected {
+    @include reverse;
+
+    .pagination__link {
+      padding: 0;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  @include mq(0, $bp-tablet-xl) {
+    display: none;
+  }
+}
+
+.pagination__next-prev {
+  &.nextPage {
+    margin-left: auto;
+    padding-left: $spacing-md;
+    right: 0;
+  }
+
+  &.previousPage {
+    left: 0;
+    margin-right: auto;
+    padding-right: $spacing-md;
+  }
+}
+
+.pagination__next-prev-button {
+  display: flex;
+  justify-content: center;
+
+  &:not(.disabled) {
+    @include subtle-link;
+  }
+
+  &.disabled {
+    color: $c-disabled;
+  }
+}
