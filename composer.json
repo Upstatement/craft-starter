@@ -22,15 +22,18 @@
     ]
   },
   "require": {
+    "billythekid/conditional-fields": "0.0.6",
     "craftcms/cms": "^3.0.0",
     "craftcms/redactor": "^2.1",
+    "supercool/tablemaker": "^2.0",
+    "verbb/super-table": "2.4.9",
     "vlucas/phpdotenv": "^2.4.0",
     "yiisoft/yii2-redis": "2.0.8"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.3",
-    "friendsofphp/php-cs-fixer": "^2.13",
     "deployer/deployer": "^6.0",
-    "deployer/recipes": "^6.0"
+    "deployer/recipes": "^6.0",
+    "friendsofphp/php-cs-fixer": "^2.16",
+    "squizlabs/php_codesniffer": "^3.3"
   }
 }
