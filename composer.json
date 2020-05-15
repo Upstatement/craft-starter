@@ -13,7 +13,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.3.17"
     }
   },
   "scripts": {

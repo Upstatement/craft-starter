@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 	libpng-dev \
 	libxml2-dev \
 	msmtp \
-	mysql-client \
+	mariadb-client \
 	unzip \
 	&& rm -rf /var/lib/apt/lists/*
 
