@@ -1,0 +1,17 @@
+{% set topNav = craft.entries.section('topNav').all() %}
+{% set slug = craft.app.request.segments|first %}
+
+<div class="menu js--menu site-width" tabindex="0">
+  <div class="menu-inner">
+
+    <ul class="menu-items">
+      {% nav link in topNav %}
+      <li class="menu-item">
+        <a href="{{ link.navLink.getUrl() }}" class="menu-item-link {{ slug == link.slug ? 'active' }}">
+          <span>{{ link.title }}</span>
+        </a>
+      </li>
+      {% endnav %}
+    </ul>
+  </div>
+</div>
