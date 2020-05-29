@@ -1,0 +1,59 @@
+<div class="article-body-width">
+  {% for block in blocks %}
+    {% switch block.type %}
+      {# Text #}
+      {% case "textBlock" %}
+        {% include "_components/articles/blocks/redactor" with { block: block } %}
+
+      {# Separator #}
+      {% case "separator" %}
+        <hr class="wp-block-separator {{block.classOverride ? block.classOverride : '' }}" />
+
+      {# Headings #}
+      {% case "headingBlock" %}
+        {% include "_components/articles/blocks/heading" with { block: block } %}
+
+      {# Quote #}
+      {% case "quoteBlock" %}
+        {% include "_components/articles/blocks/quote" with { block: block } %}
+
+      {# Pull Quote #}
+      {% case "pullQuoteBlock" %}
+        {% include "_components/articles/blocks/pull-quote" with { block: block } %}
+
+      {# Button #}
+      {% case "buttonBlock" %}
+        {% include "_components/articles/blocks/button" with { block: block } %}
+
+      {# Table #}
+      {% case "tableBlock" %}
+        {% include "_components/articles/blocks/table" with { block: block } %}
+
+      {#
+       #
+       # Embed (Twitter, YouTube, Instagram)
+       #
+       #}
+      {% case "embedBlock" %}
+        {% set asset = block.asset.one %}
+
+        {% set embeddedAsset = craft.embeddedAssets.get(asset) %}
+        {% if embeddedAsset %}
+          {% set type = embeddedAsset.type %}
+          {% set provider = embeddedAsset.providerName|lower %}
+
+          <figure class="wp-block-embed wp-block-embed-{{provider}} {{block.alignment}} {% if embeddedAsset.aspectRatio == '56.25' %}wp-embed-aspect-16-9 wp-has-aspect-ratio{% endif %}">
+            <div class="wp-block-embed__wrapper">
+              {{ embeddedAsset ? embeddedAsset.html }}
+            </div>
+            {% if block.caption %}
+              <figcaption>{{block.caption}}</figcaption>
+            {% endif %}
+          </figure>
+
+        {% endif %}
+
+    {% endswitch %}
+
+  {% endfor %}
+</div>

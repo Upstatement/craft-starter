@@ -4,13 +4,28 @@ Global Nav
 ---------------------------------------------------------------------------
 #}
 
-{% set nav = craft.entries.section('nav').all() %}
+{% set topNav = craft.entries.section('topNav').all() %}
 {% set slug = craft.app.request.segments|first %}
 
-<nav class="nav nav--{{ pageTheme }}">
+<nav class="nav site-width">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo-link">
+      <svg class="nav__logo">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </a>
 
-  {% nav link in nav %}
-  <a class="nav__link {{ slug == link.slug ? 'nav__link--active' }}" href="{{ link.navLink }}" tabindex="{{ loop.index + 1 }}">{{ link.title }}</a>
-  {% endnav %}
+    <ul class="nav__items">
+      {% nav link in topNav %}
+      <li class="nav__item">
+        <a href="{{ link.navLink.getUrl() }}" class="nav__item-link {{ slug == link.slug ? 'active' }}" tabindex={{loop.index + 1}}>{{ link.title }}</a>
+      </li>
+      {% endnav %}
+    </ul>
 
+    <button class="nav__menu-trigger js--menu-toggle">
+      <span class="nav__hamburger"></span>
+    </button>
+  </div>
 </nav>
+

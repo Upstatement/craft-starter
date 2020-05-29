@@ -1,9 +1,10 @@
 {% extends "_layouts/base" %} {% block content %}
 
-{% include '_components/page-topper.twig' with { title: 'Latest' } %}
+{% include '_components/page-topper.twig' with { title: category.title } %}
 
 {% set posts = craft.entries
   .section('pages')
+  .relatedTo(category)
   .with([['overline'],['pageImage']])
   .limit(9)
   .all()

@@ -2,38 +2,37 @@
 {% set pageTheme = pageTheme ?? 'light' %}
 
 <!DOCTYPE html>
-<html lang="en-US">
-
-<head>
-  {% block head %}
-  {% include "_includes/head" %}
-  {% endblock %}
-</head>
-
-<body>
-
-  <a href="#content" class="skip-to-content" tabindex="1">Skip to content</a>
-
-  {% include "_includes/svgs" %}
-
-  <div class="page {{ pageClass }} page--{{ pageTheme }}">
-
-    {% block nav %}
-    {% include "_components/nav" %}
+<html lang="en-us">
+  <head>
+    {% block head %}
+      {% include "_includes/head" %}
     {% endblock %}
+  </head>
 
-    {% block content %}
-    {% endblock %}
+  <body class="article-align-center">
+    <div class="page {{ pageClass }} page--{{ pageTheme }}">
+      <a href="#content" class="skip-to-content" tabindex="0">Skip to content</a>
 
-    {% block footer %}
-    {% include "_components/footer" %}
-    {% endblock %}
+      {% include "_includes/svgs" %}
+      {% include "_includes/grid" %}
 
-  </div>
+      <div class="page-wrapper">
 
-  <script src="/static/dist/vendor.js"></script>
-  <script src="/static/dist/main.js"></script>
+        {% block nav %}
+          {% include "_components/nav" %}
+        {% endblock %}
 
-</body>
+        <main id="content" class="content" tabindex="-1">
+          {% block content %}
+          {% endblock %}
+        </main>
 
+        {% block footer %}
+          {% include "_components/footer" %}
+        {% endblock %}
+      </div>
+    </div>
+    <script src="/static/dist/vendor.js"></script>
+    <script src="/static/dist/main.js"></script>
+  </body>
 </html>

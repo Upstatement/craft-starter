@@ -1,0 +1,12 @@
+{% switch block.headingSize %}
+  {% case "h2" %}
+    <h2>{{block.headingText}}</h2>
+  {% case "h3" %}
+    <h3>{{block.headingText}}</h3>
+  {% case "h4" %}
+    <h4>{{block.headingText}}</h4>
+  {% case "h5" %}
+    <h5>{{block.headingText}}</h5>
+  {% case "h6" %}
+    <h6>{{block.headingText}}</h6>
+{% endswitch %}

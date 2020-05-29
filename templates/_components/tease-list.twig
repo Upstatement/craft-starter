@@ -1,0 +1,38 @@
+{% if posts|length %}
+<ul class="tease-list">
+  {% for post in posts %}
+    <li class="tease {{ post.pageImage ? 'tease--image' : 'tease--no-image' }}">
+      <div class="tease__inner">
+        {% if post.pageImage %}
+          <a href="{{ post.url }}" class="tease__art-mod" tabindex="-1">
+            <img class="tease__art" src="{{ post.pageImage[0].url }}">
+          </a>
+        {% endif %}
+
+        <div class="tease__text-mod">
+          {% if post.overline %}
+            <p class="tease__overline">
+              <a href="/category/{{ post.overline[0].slug }}" class="tease__overline-link">
+                {{ post.overline[0].title }}
+              </a>
+            </p>
+          {% endif %}
+
+          <a class="tease__hgroup" href="{{ post.url }}">
+            <h3 class="tease__h"><span class="tease__h-underline">{{ post.title }}</span></h3>
+            <p class="tease__desc">
+              {{ post.excerpt | chop(limit=40, unit='w', append='...' ) }}
+            </p>
+          </a>
+
+          {% if post.bylines is not empty %}
+            <div class="tease__authors">
+              {% include '_components/articles/byline_format.twig' with { bylines: post.bylines } %}
+            </div>
+          {% endif %}
+        </div>
+      <div>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}

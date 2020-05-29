@@ -1,0 +1,11 @@
+{% set buttons = block.button.all() %}
+
+<div class="wp-block-buttons">
+  {% for button in buttons %}
+    <div class="wp-block-button {{button.buttonStyle}}">
+      <a class="wp-block-button__link" href="{{button.buttonLink}}" rel="noopener noreferrer" target="_blank">
+        {{button.buttonText}}
+      </a>
+    </div>
+  {% endfor %}
+</div>

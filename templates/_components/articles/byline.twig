@@ -1,0 +1,10 @@
+<div class="article__byline">
+  {% if article.bylines is not empty %}
+    <div class="article__byline__author">
+      {% include '_components/articles/byline_format.twig' with { bylines: article.bylines } %}
+    </div>
+  {% endif %}
+
+  <div class="article__byline__date">{{ article.postDate|date('M d, Y') }}</div>
+</div>
+

@@ -1,0 +1,35 @@
+<div class="topper {{article.pageTopper}} {% if article.pageImageCaption %}topper--caption{% endif %}">
+  <div class="topper-hgroup">
+    {% if article.overline %}
+      <p class="topper-overline">
+        <a href="/category/{{ article.overline[0].slug }}" class="topper-overline-link">
+          {{ article.overline[0].title }}
+        </a>
+      </p>
+    {% endif %}
+
+    {% if article.title %}
+      <h1 class="topper-hed">{{ article.title }}</h1>
+    {% endif %}
+
+    {% if article.pageDescription %}
+      <div class="topper-dek">{{ article.pageDescription }}</div>
+    {% endif %}
+  </div>
+
+  {% if article.pageImage and article.pageImage|length > 0 %}
+    <figure class="topper-asset-mod">
+      <div class="article-asset-mod">
+        <img class="article-asset" src="{{article.pageImage[0].getUrl()}}" />
+        {% if article.pageImageCaption %}
+          <figcaption class="article-caption">
+            <div class="article-caption-width">
+              <span class="article-caption__description">{{article.pageImageCaption}}</span>
+              <span class="article-caption__credit">Video provided by MIT</span>
+            </div>
+          </figcaption>
+        {% endif %}
+      </div>
+    </figure>
+  {% endif %}
+</div>
