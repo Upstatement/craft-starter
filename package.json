@@ -35,6 +35,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.2.0",
     "@upstatement/eslint-config": "^0.4.3",
     "@upstatement/prettier-config": "^0.3.0",

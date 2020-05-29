@@ -74,7 +74,7 @@ module.exports = {
     }),
     // https://github.com/Va1/browser-sync-webpack-plugin
     new BrowserSyncPlugin({
-      files: ['templates/**/*.{twig,html}'],
+      files: ['dist/**/*.+(css|js)', '*.php', 'templates/**/*.twig'],
       proxy: 'http://craftstarter.ups.dock',
       injectChanges: true,
       open: false,
