@@ -1,5 +1,4 @@
-{% set pageClass = pageClass ?? '' %}
-{% set pageTheme = pageTheme ?? 'light' %}
+{% set navLight = navLight ? 'light-nav' : '' %}
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -9,8 +8,8 @@
     {% endblock %}
   </head>
 
-  <body class="article-align-center">
-    <div class="page {{ pageClass }} page--{{ pageTheme }}">
+  <body class="article-align-center {{navLight}}">
+    <div class="page">
       <a href="#content" class="skip-to-content" tabindex="0">Skip to content</a>
 
       {% include "_includes/svgs" %}
@@ -19,7 +18,7 @@
       <div class="page-wrapper">
 
         {% block nav %}
-          {% include "_components/nav" %}
+          {% include "_components/nav" with { navLight: navLight } %}
         {% endblock %}
 
         <main id="content" class="content" tabindex="-1">
