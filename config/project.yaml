@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: ba9f75b3-044d-4940-9776-120f90ccdc9c
-dateModified: 1590753997
+dateModified: 1590758915
 email:
   fromEmail: admin@example.com
   fromName: 'Craft Starter'
@@ -30,6 +30,18 @@ fieldGroups:
   ae387cfa-d728-4db8-b2d5-045274b34b77:
     name: nav
 fields:
+  01fc9a8c-9d56-41bb-82c7-44a9fb0bcbe1:
+    contentColumnType: boolean
+    fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+    handle: useLightTopNavigation
+    instructions: ''
+    name: 'Use Light Top Navigation'
+    searchable: true
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
   073a1223-abbb-47ba-8817-09bd9616aea7:
     contentColumnType: string
     fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
@@ -1332,21 +1344,24 @@ sections:
                 sortOrder: 1
               -
                 fields:
+                  01fc9a8c-9d56-41bb-82c7-44a9fb0bcbe1:
+                    required: false
+                    sortOrder: 3
                   865e9496-fa3d-4372-8697-33ebb0e2d03c:
                     required: false
                     sortOrder: 1
                   b21ab3db-3b39-444f-ae0c-33c783266b56:
                     required: false
-                    sortOrder: 3
+                    sortOrder: 4
                   b9b564e6-850c-42bf-a84e-dc808c32a868:
                     required: false
                     sortOrder: 2
                   d14e0870-385d-4950-b8f5-8d01434fae69:
                     required: false
-                    sortOrder: 4
+                    sortOrder: 5
                   eaa8f6b6-38f7-4671-8f91-bebf5548e65d:
                     required: false
-                    sortOrder: 5
+                    sortOrder: 6
                 name: 'Page Topper'
                 sortOrder: 2
               -

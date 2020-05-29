@@ -52,6 +52,14 @@ At this point you should have a fully functioning Craft install available at htt
 
 > **NOTE:** `your-project-name` should be the same name you replaced `craftstarter` with in the "Making it your own" section above
 
+## Importing Base Data
+
+The Craft Starter Kit comes with a few basic content entries to give an example of what kinds of things can be done.
+
+1. With your server closed, run `docker-compose start`
+2. Then to import the database run `cat craft.sql | docker-compose exec -T db mysql -uroot -proot craft`
+3. Then run `./bin/start` to re-start your development server.
+
 ## 🛠 Development Workflow
 
 1. Run `nvm use` to ensure you're using the correct version of Node
