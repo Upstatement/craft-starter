@@ -25,7 +25,10 @@
     "billythekid/conditional-fields": "0.0.6",
     "craftcms/cms": "^3.0.0",
     "craftcms/redactor": "^2.1",
+    "sebastianlenz/linkfield": "1.0.21",
+    "spicyweb/craft-embedded-assets": "^2.2",
     "supercool/tablemaker": "^2.0",
+    "topshelfcraft/wordsmith": "^3.2",
     "verbb/super-table": "2.4.9",
     "vlucas/phpdotenv": "^2.4.0",
     "yiisoft/yii2-redis": "2.0.8"
