@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: ba9f75b3-044d-4940-9776-120f90ccdc9c
-dateModified: 1590758915
+dateModified: 1590761569
 email:
   fromEmail: admin@example.com
   fromName: 'Craft Starter'
@@ -392,16 +392,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Categories
-globalSets:
-  f22095b5-ab7e-4822-b815-108c21d2e583:
-    fieldLayouts:
-      87e0a012-cb61-43e3-a735-1c8ddf8a4d15:
-        tabs:
-          -
-            name: Navigation
-            sortOrder: 1
-    handle: mainNavigation
-    name: 'Main navigation'
 graphql:
   schemas:
     cb636cc0-3e0f-4238-a71c-23854ec212cf:
