@@ -1,0 +1,20 @@
+{% extends "_layouts/base" %}
+
+{% set navLight = entry.useLightTopNavigation %}
+{% set bodyClass = "article-align-left" %}
+
+{% block content %}
+
+{% include "_components/articles/article-topper" with { article: entry } %}
+
+<article class="basic-page__body">
+  {% include "_components/articles/byline.twig" with { article: entry } %}
+  {% include "_components/articles/share-tools.twig" with { article: entry } %}
+
+  <div class="basic-page__body-width js-hang-punc">
+    {% include "_components/content-blocks" with { blocks: entry.contentBlocks.all() } %}
+  </div>
+  {% include "_components/articles/article-footer.twig" with { article: entry } %}
+</article>
+
+{% endblock %}

@@ -1,6 +1,8 @@
 {% set navLight = navLight ?? false %}
 {% set pageClass = navLight ? 'light-nav' : '' %}
 
+{% set bodyClass = bodyClass ?? '' %}
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -9,7 +11,7 @@
     {% endblock %}
   </head>
 
-  <body class="article-align-center {{pageClass}}">
+  <body class="{{bodyClass}} {{pageClass}}">
     <div class="page">
       <a href="#content" class="skip-to-content" tabindex="0">Skip to content</a>
 
