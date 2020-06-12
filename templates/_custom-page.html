@@ -4,19 +4,6 @@
 
 {% block content %}
 
-{% embed '_components/carousel' with {
-  title: 'Latest Posts',
-  groupCells: 1
-} %}
-  {% block items %}
-    {% for slide in entry.slides %}
-    <div class="c-carousel__item">
-      <div class="c-carousel__image" style="background-image: url({{slide.getUrl()}})"></div>
-    </div>
-    {% endfor %}
-  {% endblock %}
-{% endembed %}
-
 {% include "_components/articles/article-topper" with { article: entry } %}
 
 <article class="article-body">
