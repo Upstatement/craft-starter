@@ -10,7 +10,7 @@ categoryGroups:
     structure:
       maxLevels: null
       uid: ba9f75b3-044d-4940-9776-120f90ccdc9c
-dateModified: 1590761569
+dateModified: 1591967256
 email:
   fromEmail: admin@example.com
   fromName: 'Craft Starter'
@@ -1240,12 +1240,44 @@ sections:
     enableVersioning: true
     entryTypes:
       1c4f7591-0a75-4354-b46f-3ee11add16b2:
+        fieldLayouts:
+          972850b4-a041-4db8-a33d-1a2549b131fc:
+            tabs:
+              -
+                fields:
+                  01fc9a8c-9d56-41bb-82c7-44a9fb0bcbe1:
+                    required: false
+                    sortOrder: 3
+                  865e9496-fa3d-4372-8697-33ebb0e2d03c:
+                    required: false
+                    sortOrder: 1
+                  b21ab3db-3b39-444f-ae0c-33c783266b56:
+                    required: false
+                    sortOrder: 4
+                  b9b564e6-850c-42bf-a84e-dc808c32a868:
+                    required: false
+                    sortOrder: 2
+                  d14e0870-385d-4950-b8f5-8d01434fae69:
+                    required: false
+                    sortOrder: 5
+                  eaa8f6b6-38f7-4671-8f91-bebf5548e65d:
+                    required: false
+                    sortOrder: 6
+                name: 'Page Topper'
+                sortOrder: 1
+              -
+                fields:
+                  6e341ae4-c396-4762-ab24-8a224c3933aa:
+                    required: false
+                    sortOrder: 1
+                name: 'Page Content'
+                sortOrder: 2
         handle: about
-        hasTitleField: false
+        hasTitleField: true
         name: About
         sortOrder: 1
         titleFormat: '{section.name|raw}'
-        titleLabel: null
+        titleLabel: 'Page Title'
     handle: about
     name: About
     propagationMethod: all
