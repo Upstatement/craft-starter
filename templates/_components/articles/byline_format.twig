@@ -2,7 +2,7 @@
   {# Use an oxford comma if we have more than 2 names #}
   {% set andParam = bylines|length > 2 ? ', and ' : ' and ' %}
   by
-  {% for author in bylines %}
+  {% for author in bylines.all() %}
     <a href="/people/{{author.slug}}">{{author.title}}</a>{% if loop.last %}{% elseif loop.revindex == 2 %}{{andParam}}{% else %},{% endif %}
   {% endfor %}
 {% endif %}
