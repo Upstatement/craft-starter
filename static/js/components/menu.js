@@ -1,7 +1,5 @@
 import $ from 'jquery';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
-// import { on } from '@src/utils';
-import { KEY_CODES } from '../utils/constants';
 
 class Menu {
   constructor() {
@@ -87,12 +85,14 @@ class Menu {
 
   keydown(e) {
     switch (e.keyCode) {
-      case KEY_CODES.ESCAPE: {
+      // Escape
+      case 27: {
         this.close();
         break;
       }
 
-      case KEY_CODES.TAB: {
+      // Tab
+      case 9: {
         if (this.focusableEls.length === 1) {
           e.preventDefault();
           break;
