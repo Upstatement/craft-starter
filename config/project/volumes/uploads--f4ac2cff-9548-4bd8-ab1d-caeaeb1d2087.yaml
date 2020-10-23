@@ -1,13 +1,45 @@
 fieldLayouts:
   fe38927e-fdc8-41f6-bd64-ca8fb268c483:
     tabs:
-      - fields:
-          0c552e10-4132-473c-beef-98b8ec13e5b8:
-            required: false
-            sortOrder: 1
-          f0ffb8cd-1a12-4546-9e74-6748b7894dd0:
-            required: false
-            sortOrder: 2
+      - elements:
+          - autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+          - fieldUid: 0c552e10-4132-473c-beef-98b8ec13e5b8
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          - fieldUid: f0ffb8cd-1a12-4546-9e74-6748b7894dd0
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Asset Details'
         sortOrder: 1
 handle: uploads

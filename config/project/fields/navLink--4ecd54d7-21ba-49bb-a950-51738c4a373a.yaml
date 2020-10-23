@@ -5,7 +5,7 @@ instructions: ''
 name: 'Nav Link'
 searchable: true
 settings:
-  allowCustomText: ''
+  allowCustomText: '1'
   allowTarget: ''
   allowedLinkNames:
     2: category

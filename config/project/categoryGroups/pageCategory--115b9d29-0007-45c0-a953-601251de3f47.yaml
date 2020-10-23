@@ -1,3 +1,31 @@
+fieldLayouts:
+  bf57cf7c-480c-4247-b88c-6cbb2e3b9070:
+    tabs:
+      - elements:
+          - autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
 handle: pageCategory
 name: 'Page Category'
 siteSettings:

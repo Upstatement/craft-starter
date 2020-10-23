@@ -1,7 +1,36 @@
+fieldLayouts:
+  b3ad0917-90a2-464e-a9e1-5e6f13a2245c:
+    tabs:
+      - elements:
+          - autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
 handle: people
 hasTitleField: true
 name: People
 section: 4d82dd43-5c40-452d-89c4-bac1d1a8557a
 sortOrder: 1
-titleFormat: ''
-titleLabel: Name
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

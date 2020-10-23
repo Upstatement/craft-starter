@@ -2,16 +2,31 @@ field: 844cedf4-3a01-4ded-9282-4a372923d162
 fieldLayouts:
   256ed86d-6fe0-464a-8324-7062a40f8c62:
     tabs:
-      - fields:
-          1cfa6750-655f-4c56-a77b-cc3158ef3789:
+      - elements:
+          - fieldUid: 1cfa6750-655f-4c56-a77b-cc3158ef3789
+            instructions: null
+            label: null
             required: true
-            sortOrder: 1
-          d5b49bab-7b2b-4367-b874-9a1d8e17a36e:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          - fieldUid: d5b49bab-7b2b-4367-b874-9a1d8e17a36e
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
-          f0152f7f-c868-40e3-9fb8-f05acfc7b8b9:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          - fieldUid: f0152f7f-c868-40e3-9fb8-f05acfc7b8b9
+            instructions: null
+            label: null
             required: true
-            sortOrder: 3
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -30,6 +45,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -54,7 +70,7 @@ fields:
             - - label
               - Outline
             - - value
-              - is-style-outline
+              - is-styile-outline
             - - default
               - ''
     translationKeyFormat: null
@@ -75,6 +91,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText

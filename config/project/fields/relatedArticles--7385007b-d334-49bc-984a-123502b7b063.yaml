@@ -5,13 +5,15 @@ instructions: ''
 name: 'Related Articles'
 searchable: true
 settings:
+  allowSelfRelations: false
   limit: '5'
   localizeRelations: false
   selectionLabel: ''
+  showSiteMenu: true
   source: null
   sources: '*'
   targetSiteId: null
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site

@@ -2,12 +2,36 @@ fieldLayouts:
   3e244f1d-729e-4213-8901-563f77bffe49:
     tabs:
       - elements:
-          - instructions: null
-            label: 'Navigation Label'
+          - autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
             type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
           - fieldUid: 4ecd54d7-21ba-49bb-a950-51738c4a373a
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: General
         sortOrder: 1
 handle: topNav
@@ -15,4 +39,6 @@ hasTitleField: true
 name: 'Top Nav'
 section: d00e7e1a-acf8-46d1-b2d8-ed3b857f9116
 sortOrder: 1
-titleFormat: ''
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

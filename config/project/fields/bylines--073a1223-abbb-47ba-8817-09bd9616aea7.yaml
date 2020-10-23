@@ -5,14 +5,16 @@ instructions: 'The authors of the story'
 name: Bylines
 searchable: true
 settings:
+  allowSelfRelations: false
   limit: ''
   localizeRelations: false
   selectionLabel: 'Add an author'
+  showSiteMenu: true
   source: null
   sources:
     - 'section:4d82dd43-5c40-452d-89c4-bac1d1a8557a'
   targetSiteId: null
-  validateRelatedElements: ''
+  validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site

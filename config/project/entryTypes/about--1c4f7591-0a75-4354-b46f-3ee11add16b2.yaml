@@ -2,33 +2,87 @@ fieldLayouts:
   972850b4-a041-4db8-a33d-1a2549b131fc:
     tabs:
       - elements:
-          - instructions: null
-            label: 'Page Title'
+          - autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
             type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
           - fieldUid: 865e9496-fa3d-4372-8697-33ebb0e2d03c
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           - fieldUid: b9b564e6-850c-42bf-a84e-dc808c32a868
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           - fieldUid: 01fc9a8c-9d56-41bb-82c7-44a9fb0bcbe1
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           - fieldUid: b21ab3db-3b39-444f-ae0c-33c783266b56
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           - fieldUid: d14e0870-385d-4950-b8f5-8d01434fae69
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
           - fieldUid: eaa8f6b6-38f7-4671-8f91-bebf5548e65d
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Page Topper'
         sortOrder: 1
       - elements:
           - fieldUid: 6e341ae4-c396-4762-ab24-8a224c3933aa
-            required: false
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Page Content'
         sortOrder: 2
 handle: about
@@ -37,3 +91,5 @@ name: About
 section: 1625800c-9cd3-43d1-8cab-57e61cb95a45
 sortOrder: 1
 titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

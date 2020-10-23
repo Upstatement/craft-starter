@@ -2,10 +2,15 @@ field: 6e341ae4-c396-4762-ab24-8a224c3933aa
 fieldLayouts:
   b43487d1-24a6-4b4c-84f8-64af136db66a:
     tabs:
-      - fields:
-          b3acf43e-c97c-4003-8486-97694710feb9:
+      - elements:
+          - fieldUid: b3acf43e-c97c-4003-8486-97694710feb9
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:

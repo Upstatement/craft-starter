@@ -2,19 +2,39 @@ field: 6e341ae4-c396-4762-ab24-8a224c3933aa
 fieldLayouts:
   5411bffa-3fa1-4e32-8af5-b9f7d3b5ea2c:
     tabs:
-      - fields:
-          3c86f57c-ff73-421e-b7d1-36b49b2f824b:
+      - elements:
+          - fieldUid: 7c99f800-74ef-4db0-960c-f5d861db69c9
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
-          7b763993-6e52-45bd-957a-81582e0b8745:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          - fieldUid: 3c86f57c-ff73-421e-b7d1-36b49b2f824b
+            instructions: null
+            label: null
             required: false
-            sortOrder: 3
-          7c99f800-74ef-4db0-960c-f5d861db69c9:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          - fieldUid: 7b763993-6e52-45bd-957a-81582e0b8745
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
-          ede2ab19-0661-4b54-83cc-3394d47ac7fd:
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          - fieldUid: ede2ab19-0661-4b54-83cc-3394d47ac7fd
+            instructions: null
+            label: null
             required: false
-            sortOrder: 4
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -33,6 +53,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -51,6 +72,7 @@ fields:
       initialRows: '4'
       multiline: ''
       placeholder: ''
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
@@ -62,13 +84,17 @@ fields:
     name: Asset
     searchable: true
     settings:
+      allowSelfRelations: false
+      allowUploads: true
       allowedKinds: null
       defaultUploadLocationSource: 'volume:f4ac2cff-9548-4bd8-ab1d-caeaeb1d2087'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
+      previewMode: full
       restrictFiles: ''
       selectionLabel: ''
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:f4ac2cff-9548-4bd8-ab1d-caeaeb1d2087'
@@ -77,7 +103,7 @@ fields:
       sources: '*'
       targetSiteId: null
       useSingleFolder: false
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: list
     translationKeyFormat: null
     translationMethod: site

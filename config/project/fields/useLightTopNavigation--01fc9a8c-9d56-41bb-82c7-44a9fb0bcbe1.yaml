@@ -5,7 +5,9 @@ instructions: ''
 name: 'Use Light Top Navigation'
 searchable: true
 settings:
-  default: ''
+  default: false
+  offLabel: null
+  onLabel: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Lightswitch
