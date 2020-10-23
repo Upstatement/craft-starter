@@ -1,0 +1,55 @@
+dateModified: 1603453423
+email:
+  fromEmail: admin@example.com
+  fromName: 'Craft Starter'
+  template: null
+  transportSettings:
+    encryptionMethod: ''
+    host: $SYSTEM_EMAIL_SMTP_HOST_NAME
+    password: ''
+    port: $SYSTEM_EMAIL_SMTP_PORT
+    timeout: '10'
+    useAuthentication: ''
+    username: ''
+  transportType: craft\mail\transportadapters\Smtp
+plugins:
+  conditional-fields:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.1
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+  tablemaker:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Craft Starter'
+  schemaVersion: 3.5.13
+  timeZone: America/New_York
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

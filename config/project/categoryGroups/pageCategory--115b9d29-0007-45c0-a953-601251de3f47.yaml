@@ -1,0 +1,10 @@
+handle: pageCategory
+name: 'Page Category'
+siteSettings:
+  88bb7ef8-41f5-46d5-a33a-b5c80c65aff9:
+    hasUrls: true
+    template: category/_index
+    uriFormat: 'category/{slug}'
+structure:
+  maxLevels: null
+  uid: ba9f75b3-044d-4940-9776-120f90ccdc9c

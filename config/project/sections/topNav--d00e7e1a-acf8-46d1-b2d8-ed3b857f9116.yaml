@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: topNav
+name: 'Top Nav'
+propagationMethod: all
+siteSettings:
+  88bb7ef8-41f5-46d5-a33a-b5c80c65aff9:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: ''
+structure:
+  maxLevels: 1
+  uid: 845a09c2-9944-4e11-a02a-15dd79180a9d
+type: structure

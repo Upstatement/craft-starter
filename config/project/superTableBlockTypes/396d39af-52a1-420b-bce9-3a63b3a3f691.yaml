@@ -1,0 +1,80 @@
+field: 844cedf4-3a01-4ded-9282-4a372923d162
+fieldLayouts:
+  256ed86d-6fe0-464a-8324-7062a40f8c62:
+    tabs:
+      - fields:
+          1cfa6750-655f-4c56-a77b-cc3158ef3789:
+            required: true
+            sortOrder: 1
+          d5b49bab-7b2b-4367-b874-9a1d8e17a36e:
+            required: false
+            sortOrder: 2
+          f0152f7f-c868-40e3-9fb8-f05acfc7b8b9:
+            required: true
+            sortOrder: 3
+        name: Content
+        sortOrder: 1
+fields:
+  1cfa6750-655f-4c56-a77b-cc3158ef3789:
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonText
+    instructions: ''
+    name: 'Button Text'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d5b49bab-7b2b-4367-b874-9a1d8e17a36e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttonStyle
+    instructions: ''
+    name: 'Button Style'
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        - __assoc__:
+            - - label
+              - Fill
+            - - value
+              - is-style-fill
+            - - default
+              - '1'
+        - __assoc__:
+            - - label
+              - Outline
+            - - value
+              - is-style-outline
+            - - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  f0152f7f-c868-40e3-9fb8-f05acfc7b8b9:
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonLink
+    instructions: ''
+    name: 'Button Link'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

@@ -1,0 +1,11 @@
+contentColumnType: boolean
+fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+handle: useLightTopNavigation
+instructions: ''
+name: 'Use Light Top Navigation'
+searchable: true
+settings:
+  default: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

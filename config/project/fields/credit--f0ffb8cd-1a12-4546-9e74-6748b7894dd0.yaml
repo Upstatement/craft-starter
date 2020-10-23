@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: d182f325-83fb-4605-89b1-59373008c9e0
+handle: credit
+instructions: 'This can be just a name, or a link.'
+name: Credit
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

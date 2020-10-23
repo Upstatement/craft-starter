@@ -1,0 +1,18 @@
+fieldLayouts:
+  3e244f1d-729e-4213-8901-563f77bffe49:
+    tabs:
+      - elements:
+          - instructions: null
+            label: 'Navigation Label'
+            type: craft\fieldlayoutelements\EntryTitleField
+          - fieldUid: 4ecd54d7-21ba-49bb-a950-51738c4a373a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: General
+        sortOrder: 1
+handle: topNav
+hasTitleField: true
+name: 'Top Nav'
+section: d00e7e1a-acf8-46d1-b2d8-ed3b857f9116
+sortOrder: 1
+titleFormat: ''

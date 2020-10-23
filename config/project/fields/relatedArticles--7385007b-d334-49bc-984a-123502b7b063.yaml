@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+handle: relatedArticles
+instructions: ''
+name: 'Related Articles'
+searchable: true
+settings:
+  limit: '5'
+  localizeRelations: false
+  selectionLabel: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

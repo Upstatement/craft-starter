@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: people
+name: People
+propagationMethod: all
+siteSettings:
+  88bb7ef8-41f5-46d5-a33a-b5c80c65aff9:
+    enabledByDefault: true
+    hasUrls: true
+    template: people/_entry
+    uriFormat: 'people/{slug}'
+type: channel

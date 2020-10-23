@@ -1,0 +1,39 @@
+fieldLayouts:
+  972850b4-a041-4db8-a33d-1a2549b131fc:
+    tabs:
+      - elements:
+          - instructions: null
+            label: 'Page Title'
+            type: craft\fieldlayoutelements\EntryTitleField
+          - fieldUid: 865e9496-fa3d-4372-8697-33ebb0e2d03c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          - fieldUid: b9b564e6-850c-42bf-a84e-dc808c32a868
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          - fieldUid: 01fc9a8c-9d56-41bb-82c7-44a9fb0bcbe1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          - fieldUid: b21ab3db-3b39-444f-ae0c-33c783266b56
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          - fieldUid: d14e0870-385d-4950-b8f5-8d01434fae69
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          - fieldUid: eaa8f6b6-38f7-4671-8f91-bebf5548e65d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Page Topper'
+        sortOrder: 1
+      - elements:
+          - fieldUid: 6e341ae4-c396-4762-ab24-8a224c3933aa
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Page Content'
+        sortOrder: 2
+handle: about
+hasTitleField: true
+name: About
+section: 1625800c-9cd3-43d1-8cab-57e61cb95a45
+sortOrder: 1
+titleFormat: '{section.name|raw}'

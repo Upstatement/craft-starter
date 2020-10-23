@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+handle: excerpt
+instructions: 'The excerpt is displayed as a preview when listed with other stories. This will truncate down to 40 words.'
+name: Excerpt
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

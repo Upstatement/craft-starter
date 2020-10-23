@@ -1,0 +1,40 @@
+contentColumnType: string
+fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+handle: pageTopper
+instructions: ''
+name: 'Page Topper'
+searchable: true
+settings:
+  optgroups: true
+  options:
+    - __assoc__:
+        - - label
+          - Text-Only
+        - - value
+          - topper--text-only
+        - - default
+          - '1'
+    - __assoc__:
+        - - label
+          - 'Small Image'
+        - - value
+          - topper--img
+        - - default
+          - ''
+    - __assoc__:
+        - - label
+          - 'Site-Width Image'
+        - - value
+          - topper--img-alignwide
+        - - default
+          - ''
+    - __assoc__:
+        - - label
+          - 'Background Image'
+        - - value
+          - topper--bg-img
+        - - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

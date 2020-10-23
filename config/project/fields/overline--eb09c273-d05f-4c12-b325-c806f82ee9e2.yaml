@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+handle: overline
+instructions: ''
+name: Overline
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  source: 'group:115b9d29-0007-45c0-a953-601251de3f47'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

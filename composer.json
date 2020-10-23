@@ -23,12 +23,12 @@
   },
   "require": {
     "billythekid/conditional-fields": "0.0.6",
-    "craftcms/cms": "^3.0.0",
+    "craftcms/cms": "3.5.14",
     "craftcms/redactor": "^2.1",
-    "sebastianlenz/linkfield": "1.0.21",
-    "spicyweb/craft-embedded-assets": "^2.2",
+    "sebastianlenz/linkfield": "1.0.23",
+    "spicyweb/craft-embedded-assets": "2.4.1",
     "supercool/tablemaker": "^2.0",
-    "topshelfcraft/wordsmith": "^3.2",
+    "topshelfcraft/wordsmith": "3.3.0.1",
     "verbb/super-table": "2.4.9",
     "vlucas/phpdotenv": "^2.4.0",
     "yiisoft/yii2-redis": "2.0.8"

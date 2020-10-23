@@ -1,0 +1,145 @@
+field: 6e341ae4-c396-4762-ab24-8a224c3933aa
+fieldLayouts:
+  4fae3d0f-386b-4bef-88b1-956cbd48a01d:
+    tabs:
+      - fields:
+          2a8218d6-9a92-42f0-ba3b-fd3c6d9127d7:
+            required: false
+            sortOrder: 3
+          3a1f632c-d7e0-47f8-b1ef-6db3efd9b704:
+            required: false
+            sortOrder: 2
+          959d7419-6147-4654-ae25-2d06b969e611:
+            required: false
+            sortOrder: 4
+          da14d61a-624e-4780-80cd-461ffb0664bb:
+            required: false
+            sortOrder: 5
+          fb6cac88-9c59-458f-b091-41203d98ee72:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2a8218d6-9a92-42f0-ba3b-fd3c6d9127d7:
+    contentColumnType: string
+    fieldGroup: null
+    handle: alignment
+    instructions: ''
+    name: Alignment
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        - __assoc__:
+            - - label
+              - Center
+            - - value
+              - aligncenter
+            - - default
+              - '1'
+        - __assoc__:
+            - - label
+              - 'Full Width'
+            - - value
+              - alignfull
+            - - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  3a1f632c-d7e0-47f8-b1ef-6db3efd9b704:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: 'This is one single caption, no matter how many assets are added to this gallery block.'
+    name: Caption
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  959d7419-6147-4654-ae25-2d06b969e611:
+    contentColumnType: string
+    fieldGroup: null
+    handle: layout
+    instructions: ''
+    name: Layout
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        - __assoc__:
+            - - label
+              - 'Symmetrical Grid (max 6)'
+            - - value
+              - symmetrical
+            - - default
+              - '1'
+        - __assoc__:
+            - - label
+              - 'Asymmetrical Grid (max 3)'
+            - - value
+              - asymmetrical
+            - - default
+              - ''
+        - __assoc__:
+            - - label
+              - 'Row (max 4)'
+            - - value
+              - row
+            - - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  da14d61a-624e-4780-80cd-461ffb0664bb:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: cropImages
+    instructions: ''
+    name: 'Crop Images'
+    searchable: true
+    settings:
+      default: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  fb6cac88-9c59-458f-b091-41203d98ee72:
+    contentColumnType: string
+    fieldGroup: null
+    handle: asset
+    instructions: ''
+    name: Asset
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:f4ac2cff-9548-4bd8-ab1d-caeaeb1d2087'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:f4ac2cff-9548-4bd8-ab1d-caeaeb1d2087'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: imageGalleryBlock
+name: 'Image Gallery'
+sortOrder: 6

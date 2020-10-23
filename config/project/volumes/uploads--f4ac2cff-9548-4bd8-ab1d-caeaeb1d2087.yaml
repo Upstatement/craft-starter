@@ -1,0 +1,20 @@
+fieldLayouts:
+  fe38927e-fdc8-41f6-bd64-ca8fb268c483:
+    tabs:
+      - fields:
+          0c552e10-4132-473c-beef-98b8ec13e5b8:
+            required: false
+            sortOrder: 1
+          f0ffb8cd-1a12-4546-9e74-6748b7894dd0:
+            required: false
+            sortOrder: 2
+        name: 'Asset Details'
+        sortOrder: 1
+handle: uploads
+hasUrls: true
+name: Uploads
+settings:
+  path: $ASSET_BASE_PATH
+sortOrder: 0
+type: craft\volumes\Local
+url: $ASSET_BASE_URL

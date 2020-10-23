@@ -1,0 +1,18 @@
+contentColumnType: string
+fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+handle: pageConditionals
+instructions: ''
+name: 'Page Conditionals'
+searchable: true
+settings:
+  conditionalOnField: pageTopper
+  conditionalShow: '1'
+  conditionalShowOrHideFields:
+    - pageImage
+    - pageImageCaption
+  conditionalShowOrHideTabs: ''
+  conditionalValue: conditional-not-contains
+  exactlyValue: topper--text-only
+translationKeyFormat: null
+translationMethod: none
+type: billythekid\conditionalfields\fields\Conditional

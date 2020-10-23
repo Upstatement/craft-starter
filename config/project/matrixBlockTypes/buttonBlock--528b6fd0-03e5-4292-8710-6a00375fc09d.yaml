@@ -1,0 +1,46 @@
+field: 6e341ae4-c396-4762-ab24-8a224c3933aa
+fieldLayouts:
+  628ba0f4-199e-42a6-9526-336937d98415:
+    tabs:
+      - fields:
+          844cedf4-3a01-4ded-9282-4a372923d162:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  844cedf4-3a01-4ded-9282-4a372923d162:
+    contentColumnType: string
+    fieldGroup: null
+    handle: button
+    instructions: ''
+    name: Button
+    searchable: true
+    settings:
+      columns:
+        __assoc__:
+          - - 1cfa6750-655f-4c56-a77b-cc3158ef3789
+            - __assoc__:
+                - - width
+                  - ''
+          - - d5b49bab-7b2b-4367-b874-9a1d8e17a36e
+            - __assoc__:
+                - - width
+                  - ''
+          - - f0152f7f-c868-40e3-9fb8-f05acfc7b8b9
+            - __assoc__:
+                - - width
+                  - ''
+      contentTable: '{{%stc_10_button}}'
+      fieldLayout: matrix
+      maxRows: ''
+      minRows: ''
+      propagationMethod: all
+      selectionLabel: 'Add a Button'
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: buttonBlock
+name: 'Button Block'
+sortOrder: 10

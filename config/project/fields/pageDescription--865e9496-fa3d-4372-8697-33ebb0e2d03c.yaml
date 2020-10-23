@@ -1,0 +1,22 @@
+contentColumnType: text
+fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+handle: pageDescription
+instructions: 'An optional description to be displayed under the page title'
+name: 'Page Description'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Simple.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

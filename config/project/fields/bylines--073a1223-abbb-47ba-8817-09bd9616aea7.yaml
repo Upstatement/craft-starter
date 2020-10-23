@@ -1,0 +1,19 @@
+contentColumnType: string
+fieldGroup: 52be6dd4-059b-4710-a072-6b6820cca8be
+handle: bylines
+instructions: 'The authors of the story'
+name: Bylines
+searchable: true
+settings:
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add an author'
+  source: null
+  sources:
+    - 'section:4d82dd43-5c40-452d-89c4-bac1d1a8557a'
+  targetSiteId: null
+  validateRelatedElements: ''
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

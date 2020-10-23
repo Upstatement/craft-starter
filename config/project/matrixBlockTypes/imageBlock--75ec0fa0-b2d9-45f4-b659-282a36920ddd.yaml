@@ -1,0 +1,128 @@
+field: 6e341ae4-c396-4762-ab24-8a224c3933aa
+fieldLayouts:
+  5411bffa-3fa1-4e32-8af5-b9f7d3b5ea2c:
+    tabs:
+      - fields:
+          3c86f57c-ff73-421e-b7d1-36b49b2f824b:
+            required: false
+            sortOrder: 2
+          7b763993-6e52-45bd-957a-81582e0b8745:
+            required: false
+            sortOrder: 3
+          7c99f800-74ef-4db0-960c-f5d861db69c9:
+            required: false
+            sortOrder: 1
+          ede2ab19-0661-4b54-83cc-3394d47ac7fd:
+            required: false
+            sortOrder: 4
+        name: Content
+        sortOrder: 1
+fields:
+  3c86f57c-ff73-421e-b7d1-36b49b2f824b:
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: 'This overwrites the image caption that the image has by default.'
+    name: Caption
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7b763993-6e52-45bd-957a-81582e0b8745:
+    contentColumnType: text
+    fieldGroup: null
+    handle: credit
+    instructions: 'This overwrites the credit the image has by default'
+    name: Credit
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7c99f800-74ef-4db0-960c-f5d861db69c9:
+    contentColumnType: string
+    fieldGroup: null
+    handle: asset
+    instructions: ''
+    name: Asset
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:f4ac2cff-9548-4bd8-ab1d-caeaeb1d2087'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:f4ac2cff-9548-4bd8-ab1d-caeaeb1d2087'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  ede2ab19-0661-4b54-83cc-3394d47ac7fd:
+    contentColumnType: string
+    fieldGroup: null
+    handle: alignment
+    instructions: ''
+    name: Alignment
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        - __assoc__:
+            - - label
+              - Center
+            - - value
+              - aligncenter
+            - - default
+              - '1'
+        - __assoc__:
+            - - label
+              - Left
+            - - value
+              - alignleft
+            - - default
+              - ''
+        - __assoc__:
+            - - label
+              - Right
+            - - value
+              - alignright
+            - - default
+              - ''
+        - __assoc__:
+            - - label
+              - 'Full Width'
+            - - value
+              - alignfull
+            - - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: imageBlock
+name: Image
+sortOrder: 5

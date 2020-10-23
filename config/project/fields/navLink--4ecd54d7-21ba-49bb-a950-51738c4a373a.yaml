@@ -1,0 +1,74 @@
+contentColumnType: text
+fieldGroup: ae387cfa-d728-4db8-b2d5-045274b34b77
+handle: navLink
+instructions: ''
+name: 'Nav Link'
+searchable: true
+settings:
+  allowCustomText: ''
+  allowTarget: ''
+  allowedLinkNames:
+    2: category
+    3: entry
+  autoNoReferrer: ''
+  defaultLinkName: entry
+  defaultText: ''
+  enableAriaLabel: ''
+  enableTitle: ''
+  typeSettings:
+    __assoc__:
+      - - asset
+        - __assoc__:
+            - - sources
+              - '*'
+            - - allowCustomQuery
+              - ''
+      - - category
+        - __assoc__:
+            - - sources
+              - '*'
+            - - allowCustomQuery
+              - ''
+      - - entry
+        - __assoc__:
+            - - sources
+              - '*'
+            - - allowCustomQuery
+              - ''
+      - - site
+        - __assoc__:
+            - - sites
+              - '*'
+      - - user
+        - __assoc__:
+            - - sources
+              - '*'
+            - - allowCustomQuery
+              - ''
+      - - custom
+        - __assoc__:
+            - - disableValidation
+              - ''
+            - - allowAliases
+              - ''
+      - - email
+        - __assoc__:
+            - - disableValidation
+              - ''
+            - - allowAliases
+              - ''
+      - - tel
+        - __assoc__:
+            - - disableValidation
+              - ''
+            - - allowAliases
+              - ''
+      - - url
+        - __assoc__:
+            - - disableValidation
+              - ''
+            - - allowAliases
+              - ''
+translationKeyFormat: null
+translationMethod: none
+type: typedlinkfield\fields\LinkField
