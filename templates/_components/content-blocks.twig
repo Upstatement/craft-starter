@@ -28,6 +28,14 @@
     {% case "tableBlock" %}
       {% include "_components/articles/blocks/table" with { block: block } %}
 
+    {# Image #}
+    {% case "imageBlock" %}
+      {% include "_components/articles/blocks/image" with { block: block } %}
+
+    {# ImageGallery #}
+    {% case "imageGalleryBlock" %}
+      {% include "_components/articles/blocks/gallery" with { block: block } %}
+
     {#
       #
       # Embed (Twitter, YouTube, Instagram)

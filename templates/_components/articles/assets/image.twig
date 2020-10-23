@@ -1,0 +1,13 @@
+<div class="article-asset-mod">
+  {% set imageUrl = craft.app.images.supportsWebP ? asset.getUrl({ format: 'webp'}) : asset.getUrl() %}
+
+  <img
+    class="article-asset lazy-img"
+    width={{ asset.width }}
+    height={{ asset.height }}
+    data-srcset="{{ imageUrl }}"
+    data-src="{{ imageUrl }}"
+    data-sizes="auto"
+    data-caption="{{ captionText }}"
+  />
+</div>

@@ -30,6 +30,10 @@
     padding: $article-asset-spacing $article-asset-spacing 0;
   }
 
+  .article-asset-mod img {
+    cursor: pointer;
+  }
+
   .wp-block-gallery,
   .blocks-gallery-grid {
     clear: both;
@@ -40,14 +44,14 @@
 
     .blocks-gallery-image,
     .blocks-gallery-item {
-      // Add space between thumbnails, and unset right most thumbnails later.
-      margin: 0 $article-asset-spacing $article-asset-spacing 0;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      position: relative;
       // If there is an orphan image, this makes it go full width
       flex-grow: 1;
+      justify-content: center;
+      // Add space between thumbnails, and unset right most thumbnails later.
+      margin: 0 $article-asset-spacing $article-asset-spacing 0;
+      position: relative;
 
       .js-modal-gallery__trigger {
         width: 100%;
@@ -55,25 +59,26 @@
 
       .article-asset-mod,
       figure {
-        margin: 0;
         height: 100%;
+        margin: 0;
         width: 100%;
 
         // IE doesn't support flex so omit that.
         @supports (position: sticky) {
-          display: flex;
           align-items: flex-end;
+          display: flex;
           justify-content: flex-start;
         }
       }
 
       video,
       img {
+        cursor: pointer;
         display: block;
-        max-width: 100%;
         height: auto;
-        width: 100%;
+        max-width: 100%;
         object-fit: cover;
+        width: 100%;
       }
 
       figcaption {
@@ -97,8 +102,8 @@
 
         // IE11 doesn't read rules inside this query. They are applied only to modern browsers.
         @supports (position: sticky) {
-          height: 100%;
           flex: 1;
+          height: 100%;
           object-fit: cover;
         }
       }

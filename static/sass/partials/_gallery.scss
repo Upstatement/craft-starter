@@ -1,0 +1,276 @@
+.slbOverlay,
+.slbWrapOuter,
+.slbWrap {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.slbOverlay {
+  animation: slbOverlay 0.5s;
+  background-color: #000000;
+  opacity: 0.7;
+  overflow: hidden;
+  z-index: 2000;
+}
+
+.slbWrapOuter {
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 2010;
+}
+
+.slbWrap {
+  position: absolute;
+  text-align: center;
+}
+
+.slbWrap:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.slbContentOuter {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 1em;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  z-index: 2020;
+}
+
+.slbContentEl .slbContentOuter {
+  padding: 5em 1em;
+}
+
+.slbContent {
+  position: relative;
+}
+
+.slbContentEl .slbContent {
+  animation: slbEnter 0.3s;
+  background-color: #ffffff;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.4);
+}
+
+.slbImageWrap {
+  animation: slbEnter 0.3s;
+  position: relative;
+}
+
+.slbImageWrap:after {
+  background-color: #ffffff;
+  bottom: 5em;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.6);
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 5em;
+  z-index: -1;
+}
+
+.slbDirectionNext .slbImageWrap {
+  animation: slbEnterNext 0.4s;
+}
+
+.slbDirectionPrev .slbImageWrap {
+  animation: slbEnterPrev 0.4s;
+}
+
+.slbImage {
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  line-height: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 5em 0;
+  width: auto;
+}
+
+.slbCaption {
+  bottom: 1em;
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  font-size: 1em;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.71429em 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.slbCloseBtn,
+.slbArrow {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.slbCloseBtn::-moz-focus-inner,
+.slbArrow::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.slbCloseBtn:hover,
+.slbArrow:hover {
+  opacity: 0.5;
+}
+
+.slbCloseBtn:active,
+.slbArrow:active {
+  opacity: 0.8;
+}
+
+.slbCloseBtn {
+  animation: slbEnter 0.3s;
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 3em;
+  height: 1.66667em;
+  line-height: 1.66667em;
+  position: absolute;
+  right: -0.33333em;
+  text-align: center;
+  top: 0;
+  width: 1.66667em;
+}
+
+.slbLoading .slbCloseBtn {
+  display: none;
+}
+
+.slbLoadingText {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.4em;
+}
+
+.slbArrows {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 50%;
+}
+
+.slbLoading .slbArrows {
+  display: none;
+}
+
+.slbArrow {
+  height: 10em;
+  margin-top: -5em;
+  opacity: 0.7;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -999em;
+  top: 50%;
+  width: 5em;
+}
+
+.slbArrow:before {
+  border: 0.8em solid transparent;
+  content: '';
+  left: 50%;
+  margin: -0.8em 0 0 -0.8em;
+  position: absolute;
+  top: 50%;
+}
+
+.slbArrow.next {
+  right: 0;
+}
+
+.slbArrow.next:before {
+  border-left-color: #ffffff;
+}
+
+.slbArrow.prev {
+  left: 0;
+}
+
+.slbArrow.prev:before {
+  border-right-color: #ffffff;
+}
+
+.slbIframeCont {
+  height: 0;
+  margin: 5em 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 80em;
+}
+
+.slbIframe {
+  background: #000000;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.6);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@keyframes slbOverlay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes slbEnter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -1em, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slbEnterNext {
+  from {
+    opacity: 0;
+    transform: translate3d(4em, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slbEnterPrev {
+  from {
+    opacity: 0;
+    transform: translate3d(-4em, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

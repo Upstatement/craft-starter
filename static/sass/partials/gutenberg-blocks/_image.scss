@@ -1,7 +1,7 @@
 %gutenberg-component-styles {
   .wp-block-image {
-    position: relative;
     max-width: initial;
+    position: relative;
   }
 
   .wp-block-image {
@@ -16,6 +16,11 @@
   figcaption {
     @include caption;
     margin-top: $article-asset-spacing;
+
+    p {
+      display: inline;
+      font-style: italic;
+    }
 
     .article-align-center & {
       text-align: center;

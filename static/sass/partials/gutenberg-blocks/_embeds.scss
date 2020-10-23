@@ -6,6 +6,10 @@
   .wp-block-embed__wrapper {
     max-width: 100%;
     overflow: hidden;
+
+    img {
+      cursor: pointer;
+    }
   }
 
   .wp-block-embed:not(.alignleft):not(.alignright) {
@@ -35,8 +39,8 @@
       &::after {
         content: '';
         display: block;
-        width: 100%;
         padding-top: 9 / 16 * 100%;
+        width: 100%;
       }
     }
 

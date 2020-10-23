@@ -1,0 +1,20 @@
+{% set asset = block.asset.one %}
+
+{% set captionText = block.caption ? block.caption : asset.caption ? asset.caption : null %}
+{% set creditText = block.credit ? block.credit : asset.credit ? asset.credit : null %}
+
+<figure class="wp-block-embed {{block.alignment}}">
+  <div class="wp-block-embed__wrapper">
+    {% include "_components/articles/assets/image" with {
+      asset: asset,
+      captionText: captionText
+    } %}
+  </div>
+  {% if captionText %}
+    <figcaption>{{captionText}} {% if creditText %}| {{creditText}} {% endif %}</figcaption>
+  {% else %}
+    {% if creditText %}
+      <figcaption>{{creditText}}</figcaption>
+    {% endif %}
+  {% endif %}
+</figure>

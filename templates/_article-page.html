@@ -11,7 +11,7 @@
   {% include "_components/articles/byline.twig" with { article: entry } %}
   {% include "_components/articles/share-tools.twig" with { article: entry } %}
 
-  <div class="article-body-width js-hang-punc">
+  <div class="article-body-width js-modal-gallery js-hang-punc">
     {% include "_components/content-blocks" with { blocks: entry.contentBlocks.all() } %}
   </div>
   {% include "_components/articles/article-footer.twig" with { article: entry } %}

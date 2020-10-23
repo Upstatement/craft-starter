@@ -1,0 +1,71 @@
+{% set imageCountToUse = 6 %}
+
+{% if block.layout == "asymmetrical" %}
+  {% set imageCountToUse = 3 %}
+{% elseif block.layout == "row" %}
+  {% set imageCountToUse = 4 %}
+{% endif %}
+
+{% set assets = block.asset|slice(0, imageCountToUse) %}
+{% set captionText = block.caption|length ? block.caption : null %}
+
+{% if block.layout == "row" %}
+  <figure class="ups-block__row {{ block.alignment }} {{ block.cropImages ? "is-cropped" : "" }}">
+    <div class="assets asset-count--{{assets|length}}">
+      {% for asset in assets %}
+        <figure class="asset-aspect-ratio">
+          {% include "_components/articles/assets/image" with {
+            asset: asset,
+            captionText: captionText
+          } %}
+        </figure>
+      {% endfor %}
+    </div>
+
+    {% include "_components/articles/assets/caption" with { captionText: captionText } %}
+  </figure>
+
+{% elseif block.layout == "asymmetrical" %}
+  <figure class="ups-block__asym-grid {{ block.alignment }} {{ block.cropImages ? "is-cropped" : "" }}">
+    <div class="assets">
+      <div class="lead-asset">
+        {% for asset in assets|slice(0,1) %}
+          {% include "_components/articles/assets/image" with {
+            asset: asset,
+            captionText: captionText
+          } %}
+        {% endfor %}
+      </div>
+
+      <div class="small-assets">
+        {% for asset in assets|slice(1,2) %}
+          {% include "_components/articles/assets/image" with {
+            asset: asset,
+            captionText: captionText
+          } %}
+        {% endfor %}
+      </div>
+    </div>
+
+    {% include "_components/articles/assets/caption" with { captionText: captionText } %}
+  </figure>
+
+{% elseif block.layout == "symmetrical" %}
+  <figure class="wp-block-gallery {{ block.alignment }} {{ block.cropImages ? "is-cropped" : "" }}">
+    <ul class="blocks-gallery-grid">
+      {% for asset in assets %}
+        <li class="blocks-gallery-item">
+          <figure>
+            {% include "_components/articles/assets/image" with {
+              asset: asset,
+              captionText: captionText
+            } %}
+          </figure>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% include "_components/articles/assets/caption" with { captionText: captionText } %}
+  </figure>
+
+{% endif %}
