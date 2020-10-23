@@ -1,8 +1,10 @@
 fieldLayouts:
-  bf57cf7c-480c-4247-b88c-6cbb2e3b9070:
+  247e7df1-b143-4a91-a6df-c508b0ce945d:
     tabs:
-      - elements:
-          - autocapitalize: true
+      -
+        elements:
+          -
+            autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
