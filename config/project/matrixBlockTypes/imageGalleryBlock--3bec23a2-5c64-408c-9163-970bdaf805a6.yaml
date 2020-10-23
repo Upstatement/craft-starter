@@ -2,8 +2,10 @@ field: 6e341ae4-c396-4762-ab24-8a224c3933aa
 fieldLayouts:
   4fae3d0f-386b-4bef-88b1-956cbd48a01d:
     tabs:
-      - elements:
-          - fieldUid: fb6cac88-9c59-458f-b091-41203d98ee72
+      -
+        elements:
+          -
+            fieldUid: fb6cac88-9c59-458f-b091-41203d98ee72
             instructions: null
             label: null
             required: false
@@ -11,7 +13,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: 3a1f632c-d7e0-47f8-b1ef-6db3efd9b704
+          -
+            fieldUid: 3a1f632c-d7e0-47f8-b1ef-6db3efd9b704
             instructions: null
             label: null
             required: false
@@ -19,7 +22,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: 2a8218d6-9a92-42f0-ba3b-fd3c6d9127d7
+          -
+            fieldUid: 2a8218d6-9a92-42f0-ba3b-fd3c6d9127d7
             instructions: null
             label: null
             required: false
@@ -27,7 +31,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: 959d7419-6147-4654-ae25-2d06b969e611
+          -
+            fieldUid: 959d7419-6147-4654-ae25-2d06b969e611
             instructions: null
             label: null
             required: false
@@ -35,7 +40,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: da14d61a-624e-4780-80cd-461ffb0664bb
+          -
+            fieldUid: da14d61a-624e-4780-80cd-461ffb0664bb
             instructions: null
             label: null
             required: false
@@ -56,19 +62,27 @@ fields:
     settings:
       optgroups: true
       options:
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - Center
-            - - value
+            -
+              - value
               - aligncenter
-            - - default
-              - '1'
-        - __assoc__:
-            - - label
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
               - 'Full Width'
-            - - value
+            -
+              - value
               - alignfull
-            - - default
+            -
+              - default
               - ''
     translationKeyFormat: null
     translationMethod: none
@@ -102,26 +116,38 @@ fields:
     settings:
       optgroups: true
       options:
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - 'Symmetrical Grid (max 6)'
-            - - value
+            -
+              - value
               - symmetrical
-            - - default
+            -
+              - default
               - '1'
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - 'Asymmetrical Grid (max 3)'
-            - - value
+            -
+              - value
               - asymmetrical
-            - - default
+            -
+              - default
               - ''
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - 'Row (max 4)'
-            - - value
+            -
+              - value
               - row
-            - - default
+            -
+              - default
               - ''
     translationKeyFormat: null
     translationMethod: none

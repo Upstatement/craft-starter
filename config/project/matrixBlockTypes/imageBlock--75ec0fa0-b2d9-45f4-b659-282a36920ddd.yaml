@@ -2,8 +2,10 @@ field: 6e341ae4-c396-4762-ab24-8a224c3933aa
 fieldLayouts:
   5411bffa-3fa1-4e32-8af5-b9f7d3b5ea2c:
     tabs:
-      - elements:
-          - fieldUid: 7c99f800-74ef-4db0-960c-f5d861db69c9
+      -
+        elements:
+          -
+            fieldUid: 7c99f800-74ef-4db0-960c-f5d861db69c9
             instructions: null
             label: null
             required: false
@@ -11,7 +13,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: 3c86f57c-ff73-421e-b7d1-36b49b2f824b
+          -
+            fieldUid: 3c86f57c-ff73-421e-b7d1-36b49b2f824b
             instructions: null
             label: null
             required: false
@@ -19,7 +22,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: 7b763993-6e52-45bd-957a-81582e0b8745
+          -
+            fieldUid: 7b763993-6e52-45bd-957a-81582e0b8745
             instructions: null
             label: null
             required: false
@@ -27,7 +31,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: ede2ab19-0661-4b54-83cc-3394d47ac7fd
+          -
+            fieldUid: ede2ab19-0661-4b54-83cc-3394d47ac7fd
             instructions: null
             label: null
             required: false
@@ -118,33 +123,49 @@ fields:
     settings:
       optgroups: true
       options:
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - Center
-            - - value
+            -
+              - value
               - aligncenter
-            - - default
+            -
+              - default
               - '1'
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - Left
-            - - value
+            -
+              - value
               - alignleft
-            - - default
+            -
+              - default
               - ''
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - Right
-            - - value
+            -
+              - value
               - alignright
-            - - default
+            -
+              - default
               - ''
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - 'Full Width'
-            - - value
+            -
+              - value
               - alignfull
-            - - default
+            -
+              - default
               - ''
     translationKeyFormat: null
     translationMethod: none

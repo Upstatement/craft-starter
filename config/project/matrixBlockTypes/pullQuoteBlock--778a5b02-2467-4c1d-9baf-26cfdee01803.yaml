@@ -2,8 +2,10 @@ field: 6e341ae4-c396-4762-ab24-8a224c3933aa
 fieldLayouts:
   7576ceb1-08aa-4b64-9d42-66155d73a17b:
     tabs:
-      - elements:
-          - fieldUid: 80da5ff3-0426-4efc-b528-d3b05bf6b844
+      -
+        elements:
+          -
+            fieldUid: 80da5ff3-0426-4efc-b528-d3b05bf6b844
             instructions: null
             label: null
             required: false
@@ -11,7 +13,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: 7c37af1a-f856-4e42-9bd7-d1c949d74cf2
+          -
+            fieldUid: 7c37af1a-f856-4e42-9bd7-d1c949d74cf2
             instructions: null
             label: null
             required: false
@@ -19,7 +22,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: 26843eac-36b8-4cf6-b0a3-40a0f9e9502f
+          -
+            fieldUid: 26843eac-36b8-4cf6-b0a3-40a0f9e9502f
             instructions: null
             label: null
             required: false
@@ -40,33 +44,49 @@ fields:
     settings:
       optgroups: true
       options:
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - Center
-            - - value
+            -
+              - value
               - aligncenter
-            - - default
+            -
+              - default
               - '1'
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - Left
-            - - value
+            -
+              - value
               - alignleft
-            - - default
+            -
+              - default
               - ''
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - Right
-            - - value
+            -
+              - value
               - alignright
-            - - default
+            -
+              - default
               - ''
-        - __assoc__:
-            - - label
+        -
+          __assoc__:
+            -
+              - label
               - 'Full Width'
-            - - value
+            -
+              - value
               - alignfull
-            - - default
+            -
+              - default
               - ''
     translationKeyFormat: null
     translationMethod: none
@@ -83,14 +103,19 @@ fields:
       availableVolumes: '*'
       cleanupHtml: true
       columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
       redactorConfig: Simple.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
+      showHtmlButtonForNonAdmins: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
@@ -106,14 +131,19 @@ fields:
       availableVolumes: '*'
       cleanupHtml: true
       columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
       purifierConfig: ''
       purifyHtml: '1'
       redactorConfig: Simple.json
       removeEmptyTags: '1'
       removeInlineStyles: '1'
       removeNbsp: '1'
+      showHtmlButtonForNonAdmins: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field

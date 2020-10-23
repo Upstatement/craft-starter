@@ -2,8 +2,10 @@ field: 6e341ae4-c396-4762-ab24-8a224c3933aa
 fieldLayouts:
   628ba0f4-199e-42a6-9526-336937d98415:
     tabs:
-      - elements:
-          - fieldUid: 844cedf4-3a01-4ded-9282-4a372923d162
+      -
+        elements:
+          -
+            fieldUid: 844cedf4-3a01-4ded-9282-4a372923d162
             instructions: null
             label: null
             required: false
@@ -24,17 +26,26 @@ fields:
     settings:
       columns:
         __assoc__:
-          - - 1cfa6750-655f-4c56-a77b-cc3158ef3789
-            - __assoc__:
-                - - width
+          -
+            - 1cfa6750-655f-4c56-a77b-cc3158ef3789
+            -
+              __assoc__:
+                -
+                  - width
                   - ''
-          - - d5b49bab-7b2b-4367-b874-9a1d8e17a36e
-            - __assoc__:
-                - - width
+          -
+            - d5b49bab-7b2b-4367-b874-9a1d8e17a36e
+            -
+              __assoc__:
+                -
+                  - width
                   - ''
-          - - f0152f7f-c868-40e3-9fb8-f05acfc7b8b9
-            - __assoc__:
-                - - width
+          -
+            - f0152f7f-c868-40e3-9fb8-f05acfc7b8b9
+            -
+              __assoc__:
+                -
+                  - width
                   - ''
       contentTable: '{{%stc_10_button}}'
       fieldLayout: matrix

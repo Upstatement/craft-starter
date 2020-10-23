@@ -1,8 +1,10 @@
 fieldLayouts:
   3e244f1d-729e-4213-8901-563f77bffe49:
     tabs:
-      - elements:
-          - autocapitalize: true
+      -
+        elements:
+          -
+            autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
@@ -24,7 +26,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-          - fieldUid: 4ecd54d7-21ba-49bb-a950-51738c4a373a
+          -
+            fieldUid: 4ecd54d7-21ba-49bb-a950-51738c4a373a
             instructions: null
             label: null
             required: '0'

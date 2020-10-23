@@ -17,57 +17,92 @@ settings:
   enableTitle: ''
   typeSettings:
     __assoc__:
-      - - asset
-        - __assoc__:
-            - - sources
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
               - '*'
-            - - allowCustomQuery
+            -
+              - allowCustomQuery
               - ''
-      - - category
-        - __assoc__:
-            - - sources
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - sources
               - '*'
-            - - allowCustomQuery
+            -
+              - allowCustomQuery
               - ''
-      - - entry
-        - __assoc__:
-            - - sources
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
               - '*'
-            - - allowCustomQuery
+            -
+              - allowCustomQuery
               - ''
-      - - site
-        - __assoc__:
-            - - sites
+      -
+        - site
+        -
+          __assoc__:
+            -
+              - sites
               - '*'
-      - - user
-        - __assoc__:
-            - - sources
+      -
+        - user
+        -
+          __assoc__:
+            -
+              - sources
               - '*'
-            - - allowCustomQuery
+            -
+              - allowCustomQuery
               - ''
-      - - custom
-        - __assoc__:
-            - - disableValidation
+      -
+        - custom
+        -
+          __assoc__:
+            -
+              - disableValidation
               - ''
-            - - allowAliases
+            -
+              - allowAliases
               - ''
-      - - email
-        - __assoc__:
-            - - disableValidation
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - disableValidation
               - ''
-            - - allowAliases
+            -
+              - allowAliases
               - ''
-      - - tel
-        - __assoc__:
-            - - disableValidation
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - disableValidation
               - ''
-            - - allowAliases
+            -
+              - allowAliases
               - ''
-      - - url
-        - __assoc__:
-            - - disableValidation
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - disableValidation
               - ''
-            - - allowAliases
+            -
+              - allowAliases
               - ''
 translationKeyFormat: null
 translationMethod: none

@@ -1,8 +1,10 @@
 fieldLayouts:
   fe38927e-fdc8-41f6-bd64-ca8fb268c483:
     tabs:
-      - elements:
-          - autocapitalize: true
+      -
+        elements:
+          -
+            autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
@@ -24,7 +26,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\TitleField
             warning: null
             width: 100
-          - fieldUid: 0c552e10-4132-473c-beef-98b8ec13e5b8
+          -
+            fieldUid: 0c552e10-4132-473c-beef-98b8ec13e5b8
             instructions: null
             label: null
             required: '0'
@@ -32,7 +35,8 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          - fieldUid: f0ffb8cd-1a12-4546-9e74-6748b7894dd0
+          -
+            fieldUid: f0ffb8cd-1a12-4546-9e74-6748b7894dd0
             instructions: null
             label: null
             required: '0'

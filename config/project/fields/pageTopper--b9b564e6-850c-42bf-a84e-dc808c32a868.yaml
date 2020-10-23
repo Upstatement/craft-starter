@@ -7,33 +7,49 @@ searchable: true
 settings:
   optgroups: true
   options:
-    - __assoc__:
-        - - label
-          - Text-Only
-        - - value
+    -
+      __assoc__:
+        -
+          - label
+          - 'Text Only'
+        -
+          - value
           - topper--text-only
-        - - default
+        -
+          - default
           - '1'
-    - __assoc__:
-        - - label
+    -
+      __assoc__:
+        -
+          - label
           - 'Small Image'
-        - - value
+        -
+          - value
           - topper-img
-        - - default
+        -
+          - default
           - ''
-    - __assoc__:
-        - - label
+    -
+      __assoc__:
+        -
+          - label
           - 'Site-Width Image'
-        - - value
+        -
+          - value
           - topper--img-alignwide
-        - - default
+        -
+          - default
           - ''
-    - __assoc__:
-        - - label
+    -
+      __assoc__:
+        -
+          - label
           - 'Background Image'
-        - - value
+        -
+          - value
           - topper--bg-img
-        - - default
+        -
+          - default
           - ''
 translationKeyFormat: null
 translationMethod: none
